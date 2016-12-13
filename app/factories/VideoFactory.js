@@ -73,7 +73,7 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 
 	let updateSingleVideo = (videoId, lyricVideo)=> {
 			return new Promise((resolve, reject) =>{
-				$http.patch('${FBCreds.URL}/video/${videoId}.json', angular.toJson(lyricVideo))
+				$http.patch(`${FBCreds.URL}/video/${videoId}.json`, angular.toJson(lyricVideo))
 				.then((result)=> {
 					resolve(result);
 				})
@@ -85,7 +85,7 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 
 	let deleteVideo = (videoId) => {
 		return new Promise((resolve, reject)=> {
-			$http.delete('${FBCreds.URL}/video/${videoId}.json')
+			$http.delete(`${FBCreds.URL}/video/${videoId}.json`)
 			.then((obj)=> {
 				resolve(obj);
 			})
