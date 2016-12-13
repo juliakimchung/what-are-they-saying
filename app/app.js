@@ -41,6 +41,7 @@ let isAuth = (AuthFactory) => new Promise((resolve, reject)=> {
     	controller: 'EditVideoCtrl',
     	resolve: {isAuth}
     })
+    
 	.otherwise("/");
 
 });

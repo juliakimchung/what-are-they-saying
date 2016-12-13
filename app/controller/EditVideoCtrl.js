@@ -21,7 +21,7 @@ $scope.watchYourVideo = () => {
 				console.log("lyricVideo",lyricVideo );
 			})
 			.then(function(){
-			$location.url('/collection');
+			$location.url('/collection/:videoId');
 		})
 	};
 });

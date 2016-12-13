@@ -8,6 +8,7 @@ app.controller("ViewMyCollectionCtrl", function($scope, $sce, VideoFactory, $loc
 			$scope.data = videoData;
 			$scope.$apply();
 			console.log("videoData", videoData );
+			
 		});
 		 
 		
