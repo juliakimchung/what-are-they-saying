@@ -1,0 +1,21 @@
+<section class="container">
+  <h2> Welcome! </h2>
+  <div class="row loginScreen">
+    <div class="col-sm-offset-1 col-md-offset-2">
+      <p> Login or Register Below </p>
+      
+        <div class="inputBox">
+          <input type="email" name="email" placeholder="Email*" class="form-control" ng-model="account.email">
+        </div>
+        <div class="inputBox">
+          <input type="password" name="password" placeholder="Password*" class="form-control" ng-model="account.password">
+        </div>
+        <div>
+           <button class="btn btn-info" ng-click="login()">Login</button>
+           <button class="btn btn-info" ng-click="register()">Register</button>
+
+        </div>
+    </div>
+  </div>
+</section>
+     

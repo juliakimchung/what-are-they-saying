@@ -1,0 +1,37 @@
+<body ng-controller="SearchCtrl">
+	<div>
+		<div class="text-center container">
+				<img src="#"><h1 id="head">Search</h1>
+		</div>
+		<h5 class="search">Search your favorite K-Pop</h5>
+		<form>
+			<input type="text" id="query" ng-model="query" placeholder="Search your favorite K-pop" class="form-control">
+
+			<button class="btn" ng-click="getVideo(query)">preview
+			</button>
+			<br>
+		</form>
+		
+		<!-- <div class="videos" ng-init="getVideo(search)">
+		</div> -->
+	</div>
+	<article class="col-md-11 box">
+		<div class="col-md-6" id="video1" ng-repeat="video in data">
+			<div class="video{{data.indexOf(video)+1}}">
+				<strong><p id="title">{{video.snippet.title}}</p></strong>
+			 <div class ="col-sm-6 prv" ng-show="preview">
+					 <button class="btn" ng-click="preview=false">close preview
+					 </button>
+					  <iframe width="600" height="450" ng-src="{{video.videoID}}" frameborder="1" allowfullscreen>
+				  	</iframe>
+				 </div>
+				  <img ng-src="{{video.snippet.thumbnails.medium.url}}">
+				  <p class="hidden">{{video.id}}</p>
+				</div>
+				<button class="btn" ng-click="saveToMyVideos(video)">Save in my collection</button>
+				<button class="btn" ng-click="preview=true">preview
+				</button>
+		 </div>
+		</article>
+	</body>
+		

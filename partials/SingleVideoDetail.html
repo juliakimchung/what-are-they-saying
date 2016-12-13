@@ -1,0 +1,15 @@
+<div ng-controller="EditVideoCtrl">
+	<div class="col-md-6 editVid">
+		<h3>{{currentVideo.title}}</h3>
+			<iframe width="850" height="500" ng-src='{{currentPath}}' frameborder="1" allowfullscreen></iframe>
+		<div class="col-md-8 lyrics">
+			<h2>Lyrics: {{currentVideo.lyrics}}</h2>
+			
+		</div>
+		<button class="btn" ng-click="lyrics=true">Write Lyrics</button>
+		<div ng-show="lyrics">
+			<textarea rows="3" placeholder="Place your lyrics here" ng-model="currentVideo.lyrics"></textarea>
+			<button class=btn ng-click="editVideo(currentVideo)">Submit</button>
+		</div>
+	</div>
+</div>
