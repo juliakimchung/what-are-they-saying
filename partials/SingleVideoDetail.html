@@ -1,7 +1,9 @@
 <div >
-	<div class="col-md-6 editVid">
+	<div class="col-md-6 editVideo">
 		<h3>{{currentVideo.title}}</h3>
 			<iframe width="850" height="500" ng-src='{{currentPath}}' frameborder="1" allowfullscreen></iframe>
+			<button class="btnx" ng-click="removeVideo(currentVideo)">Delete Video</button>
+      <a class="anc" ng-href="/#!/edit/:videoId">Watch Video</a>
 		<div class="col-md-8 lyrics">
 			<h2>Lyrics: {{currentVideo.lyrics}}</h2>
 			
@@ -11,5 +13,5 @@
 			<textarea rows="3" placeholder="Place your lyrics here" ng-model="currentVideo.lyrics"></textarea>
 			<button class=btn ng-click="editVideo(currentVideo)">Submit</button>
 		</div>
-	</div>
 </div>
+	</div>

@@ -1,6 +1,6 @@
 "use strict";
 app.controller("EditVideoCtrl", function($scope, $sce, $routeParams, $location, $interpolate, VideoFactory, AuthFactory, SearchTermData){
-	console.log("EditVideoCtrl",$routeParams.videoId );
+	console.log("EditVideoCtrl",$routeParams.videoId);
 
 	$scope.currentVideo ={};
 	$scope.currentPath="";
@@ -10,6 +10,8 @@ $scope.watchYourVideo = () => {
 			$scope.currentVideo = response;
 			$scope.currentPath=$sce.trustAsResourceUrl('http://www.youtube.com/embed/' + $scope.currentVideo.videoId)
 				console.log("$scope.currentPath",$scope.currentPath);
+				$location.url('/#!/edit/:videoId');
+				$scope.$apply();
 
 });
 }	
@@ -21,7 +23,9 @@ $scope.watchYourVideo = () => {
 				console.log("lyricVideo",lyricVideo );
 			})
 			.then(function(){
-			$location.url('/collection/:videoId');
+			$location.url('/#!/collection');
+		}).then(function(){
+			console.log("videoID",videoID );
 		})
 	};
 });

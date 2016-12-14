@@ -36,12 +36,12 @@ let isAuth = (AuthFactory) => new Promise((resolve, reject)=> {
     	controller: 'ViewMyCollectionCtrl',
     	resolve: {isAuth}
     })
-    .when('/collection/:videoId',{
+    .when('/edit/:videoId',{
     	templateUrl: 'partials/SingleVideoDetail.html',
     	controller: 'EditVideoCtrl',
     	resolve: {isAuth}
     })
-    
+
 	.otherwise("/");
 
 });
