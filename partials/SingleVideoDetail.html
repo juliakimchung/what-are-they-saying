@@ -12,9 +12,8 @@
 		<button class="btn" ng-click="lyrics=true">Write Lyrics</button>
 		
 		<div ng-show="lyrics">
-			<textarea rows="3" placeholder="Place your lyrics here" ng-model="currentVideo"></textarea>
-			<button class=btn ng-click="editVideo(currentVideo)">Submit</button>
+			<textarea rows="3" placeholder="Place your lyrics here" ng-model="currentVideo.lyrics"></textarea>
+			<button class=btn ng-click="editVideo()">Submit</button>
 		</div>
 	</div>
  </div>
-</div>

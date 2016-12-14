@@ -7,30 +7,25 @@ app.controller("EditVideoCtrl", function($scope, $sce, $routeParams, $location, 
     $scope.watchYourVideo = () => {
         VideoFactory.getSingleVideo($routeParams.videoId)
             .then((response) => {
-            		$routeParams.videoId = response.data.videoId;
+                let videoToPlay = response.data.videoId;
+            	// $routeParams.videoId = response.data.videoId;
                 console.log("response from EditVideoCtrl", response);
                 $scope.currentVideo = response.data;
-                $scope.currentPath = $sce.trustAsResourceUrl(`http://www.youtube.com/embed/${$routeParams.videoId}`)
+                $scope.currentPath = $sce.trustAsResourceUrl(`http://www.youtube.com/embed/${videoToPlay}`)
                 console.log("$scope.currentPath", $scope.currentPath);
                 $scope.$apply();
 
-            });
-
-            	// `http://www.youtube.com/embed/${$routeParams.videoId}`
+            });      	
    	};
-    $scope.editVideo = function(lyricVideo) {
-        let videoID = $routeParams.videoId;
-        console.log("lyricVideo", lyricVideo);
-        VideoFactory.updateSingleVideo(videoID, lyricVideo)
+    $scope.editVideo = function() {
+    	VideoFactory.updateSingleVideo($routeParams.videoId, $scope.currentVideo)
             .then(function() {
-                console.log("lyricVideo", lyricVideo);
+             console.log("$scope.currentVideo from edit Video",$scope.currentVideo);
             })
             .then(function() {
-                $location.url('/#!/edit/:videoId');
-            }).then(function() {
-                console.log("videoID", videoID);
+                $location.url('/#!/collection');
             })
+						
     };
-
-     $scope.watchYourVideo();
+		 $scope.watchYourVideo();
 });
