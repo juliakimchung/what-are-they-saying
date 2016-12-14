@@ -28,7 +28,7 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 }
 
  let saveVideo = function(video, user){
- 		console.log("FBCreds.URL", `${FBCreds.URL}`, "FBCreds.URL", "${FBCreds.URL}");
+ 		//console.log("FBCreds.URL", `${FBCreds.URL}`, "FBCreds.URL", "${FBCreds.URL}");
 
 		let newVideo = {
 			title: video.snippet.title,
@@ -51,19 +51,23 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 	}
 
 	let getSingleVideo = (videoId)=> {
+		console.log("videoId from getSingleVideo", videoId);
 		return new Promise((resolve, reject)=> {
-		$http.get(`${FBCreds.URL}/${fireUser}/video/${videoId}.json`)
+		$http.get(`${FBCreds.URL}/video/${videoId}.json`)
 			.then((result) =>{
+				console.log("get single video result", result);
 			 resolve(result);
 			}).catch((result)=> {
 				console.log("error",result);
 			})
-		})
-	}
+		});
+	};
+	// `${FBCreds.URL}/video/${videoId}.json`
+	// `${FBCreds.URL}/${fireUser}/video/${videoId}.json`
 // `${FBCreds.URL}/video.json?orderBy="uid"&equalTo="${fireUser}"`
 	let updateSingleVideo = (videoId, lyricVideo)=> {
 			return new Promise((resolve, reject) =>{
-				$http.patch(`${FBCreds.URL}/video/${videoId}.json`, angular.toJson(lyricVideo))
+				$http.patch( `${FBCreds.URL}/video/${videoId}.json`, angular.toJson(lyricVideo))
 				.then((result)=> {
 					resolve(result);
 				})
@@ -72,8 +76,9 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 				})
 			});
 	};
+	//${FBCreds.URL}${fireUser}/video/${videoId}.json
 	// ${fireUser}/video/${videoId}.json
-
+// `${FBCreds.URL}/video/${videoId}.json`
 	let deleteVideo = (videoId) => {
 		return new Promise((resolve, reject)=> {
 			$http.delete(`${FBCreds.URL}/${fireUser}/video/${videoId}.json`)
