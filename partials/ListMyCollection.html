@@ -1,13 +1,11 @@
-<div ng-controller="ViewMyCollectionCtrl">
-	<div class="text-center container">
+<div class="text-center container">
 		<img src="#"><h1 id="head">My Collection</h1>
-	</div>
+</div>
 	<div class=""></div>
 		<article class="col-md-11 box" ng-repeat="video in data|filter:{title: searchText.search}">
 					<strong><p id="title">{{video.title}}</p></strong>
 						<!-- <p id="lyrics">{{video.lyrics}}</p> -->
 						<img ng-src="{{video.pic.url}}">
-					<button ><a class="deleteBtn"	ng-click="remove(video.videoId)">Delete Video</a></button>
+					<button ><a class="deleteBtn"	ng-click="remove(video.id)">Delete Video</a></button>
 					<button><a class="watch" class="btn" ng-href="/#!/edit/{{video.id}}">Watch Video</a></button>
 		</article>
-</div>

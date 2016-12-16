@@ -37,8 +37,13 @@ let isAuth = (AuthFactory) => new Promise((resolve, reject)=> {
     	resolve: {isAuth}
     })
     .when('/edit/:videoId',{
-    	templateUrl: 'partials/SingleVideoDetail.html',
+    	templateUrl: 'partials/SingleVideoEdit.html',
     	controller: 'EditVideoCtrl',
+    	resolve: {isAuth}
+    })
+    .when('/review', {
+    	templateUrl: 'partials/ReviewVideoLyrics.html',
+    	controller: "AddReviewVideoCtrl",
     	resolve: {isAuth}
     })
 

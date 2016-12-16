@@ -18,11 +18,13 @@ app.controller("NavCtrl", function($scope, SearchTermData, AuthFactory){
 		 url: '#/video/collection'
 
 	},
+		{name: 'Review',
+		 url: '#/video/review'
+	},
 
 		{name: 'Search',
 		 url: '#/videos/search'
 	}
-
 
 ]
 })

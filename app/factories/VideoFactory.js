@@ -1,6 +1,6 @@
 "use strict";
 app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
-
+	
 	let fireUser = AuthFactory.getUser();
 	console.log("fireUser", fireUser);
 
@@ -9,6 +9,29 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 		console.log("FBCreds.URL",`${FBCreds.URL}/video.json?orderBy="uid"&equalTo="${fireUser}"` );
 		return new Promise((resolve, reject)=> {
 		$http.get(`${FBCreds.URL}/video.json?orderBy="uid"&equalTo="${fireUser}"`)
+		// uid from the firebase indexOn
+		.then((results)=> {
+			let videoDataArray = results.data;
+			console.log("videoDataArray",videoDataArray );
+			Object.keys(videoDataArray).forEach((key)=> {
+				videoDataArray[key].id = key;
+				videoCollection.push(videoDataArray[key]);
+			});
+				resolve(videoCollection);
+				console.log("videoCollection from getAllSavedVideos", videoCollection );
+
+		})
+			.catch((error)=> {
+				console.log("error",error );
+				});
+});
+}
+let getAllReviewVideos = (videoId) => {
+		let videoCollection = [];
+		console.log("FBCreds.URL",`${FBCreds.URL}/video.json?orderBy="review"&equalTo="${videoId}.json"` );
+		return new Promise((resolve, reject)=> {
+
+		$http.get(`${FBCreds.URL}/video.json?orderBy="review"&equalTo="${videoId}.json"`)
 		// uid from the firebase indexOn
 		.then((results)=> {
 			let videoDataArray = results.data;
@@ -35,7 +58,9 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 			videoId: video.id.videoId,
 			uid: fireUser,
 			pic: video.snippet.thumbnails.medium,
-			lyrics: ""
+			lyrics: "",
+			review: false,
+			reviewCount: 0
 		}
 		console.log("currentUser", fireUser );
 		return new Promise((resolve, reject)=> {
@@ -91,6 +116,6 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 		});
 	};
 
-	return { updateSingleVideo, getAllSavedVideos, saveVideo, deleteVideo, getSingleVideo};
+	return { updateSingleVideo, getAllSavedVideos, saveVideo, deleteVideo, getSingleVideo, getAllReviewVideos};
 
 });
