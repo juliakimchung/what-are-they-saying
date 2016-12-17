@@ -22,7 +22,6 @@ app.controller("ViewMyCollectionCtrl", function($scope, $sce, VideoFactory, $loc
 				$scope.$apply();
 		console.log("data from SaveToMyVideo", videoData );
 			});
-
 		});
 	};
 });

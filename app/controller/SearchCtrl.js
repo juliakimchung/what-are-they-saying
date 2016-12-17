@@ -28,9 +28,10 @@ app.controller("SearchCtrl", function($scope, $http, $sce, VideoFactory, AuthFac
       .then(function(){
         $location.url('/#!/collection')
         console.log("video from saveVideos", video );
-      }).catch((error)=>{
+      })
+      .catch((error)=>{
         console.log("error",error );
       })
-     };
+    };
 
 });

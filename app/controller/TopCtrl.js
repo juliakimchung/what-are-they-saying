@@ -24,8 +24,9 @@ app.controller("TopCtrl", function($scope, $location, $window, AuthFactory){
 		AuthFactory.loggoutUser()
 		.then(function(data){
 			console.log("logged out", data );
-		});
+	  });
 	};
+	
 });
 
 

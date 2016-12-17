@@ -25,7 +25,7 @@ app.controller("EditVideoCtrl", function($scope, $sce, $routeParams, $location, 
              console.log("$scope.currentVideo from edit Video",$scope.currentVideo);
             })
             .then(function() {
-                $location.url('/#!/collection');
+              $location.url('/#!/collection');
             })
       
     };

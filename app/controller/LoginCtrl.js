@@ -15,7 +15,7 @@ app.controller("LoginCtrl", function($scope, AuthFactory, $window){
 	$scope.login =() => {
 		AuthFactory.loginUser($scope.account)
 		.then((user) => {
-			console.log("user after login", user );
+			 console.log("user after login", user );
 			$window.location.href = '/#!/collection';
 		});
 	};

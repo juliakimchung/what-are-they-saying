@@ -25,6 +25,5 @@ app.controller("NavCtrl", function($scope, SearchTermData, AuthFactory){
 		{name: 'Search',
 		 url: '#/videos/search'
 	}
-
-]
+ ]
 })

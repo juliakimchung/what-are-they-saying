@@ -52,10 +52,10 @@ let isAuth = (AuthFactory) => new Promise((resolve, reject)=> {
 });
 
 app.run(($location, FBCreds) => {
-	let creds = FBCreds;
-	let authConfig = {
-		apiKey: creds.key,
-		authDomain: creds.authDomain
-	};
+	 let creds = FBCreds;
+	 let authConfig = {
+		 apiKey: creds.key,
+		 authDomain: creds.authDomain
+	 };
 	firebase.initializeApp(authConfig);
 });

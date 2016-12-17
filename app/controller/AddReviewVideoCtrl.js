@@ -51,5 +51,5 @@ app.controller("AddReviewVideoCtrl", function($scope, $sce, $routeParams, $locat
           //     })
           // };
   }
-          $scope.watchForReview();
+         $scope.watchForReview();
 });
