@@ -32,7 +32,7 @@ let getAllReviewVideos = (videoId) => {
 		return new Promise((resolve, reject)=> {
 
 		$http.get(`${FBCreds.URL}/video.json?orderBy="review"&equalTo="true"`)
-		// uid from the firebase indexOn
+		// review from the firebase indexOn
 		.then((results)=> {
 			console.log("results from getAllReviewVideos", results);
 			let videoDataArray = results.data;

@@ -8,6 +8,7 @@ app.controller("AddReviewVideoCtrl", function($scope, $sce, $routeParams, $locat
       $scope.$apply();
     })
 
+
   // $scope.currentVideos = [];
   // $scope.currentPath = "";
 

@@ -11,6 +11,7 @@ app.controller("EditVideoCtrl", function($scope, $sce, $routeParams, $location, 
              // $routeParams.videoId = response.data.videoId;
              // $routeParams.videoId can't be redefined.
                 console.log("response from EditVideoCtrl", response);
+  
                 $scope.currentVideo = response.data;
                 $scope.currentPath = $sce.trustAsResourceUrl(`http://www.youtube.com/embed/${videoToPlay}`)
                 console.log("$scope.currentPath", $scope.currentPath);
