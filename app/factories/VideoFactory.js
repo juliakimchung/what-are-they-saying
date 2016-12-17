@@ -28,20 +28,21 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 }
 let getAllReviewVideos = (videoId) => {
 		let videoCollection = [];
-		console.log("FBCreds.URL",`${FBCreds.URL}/video.json?orderBy="review"&equalTo="${videoId}.json"` );
+		console.log("FBCreds.URL",`${FBCreds.URL}/video.json?orderBy="review"&equalTo="true"` );
 		return new Promise((resolve, reject)=> {
 
-		$http.get(`${FBCreds.URL}/video.json?orderBy="review"&equalTo="${videoId}.json"`)
+		$http.get(`${FBCreds.URL}/video.json?orderBy="review"&equalTo="true"`)
 		// uid from the firebase indexOn
 		.then((results)=> {
+			console.log("results from getAllReviewVideos", results);
 			let videoDataArray = results.data;
-			console.log("videoDataArray",videoDataArray );
+			console.log("videoDataArray from get",videoDataArray );
 			Object.keys(videoDataArray).forEach((key)=> {
 				videoDataArray[key].id = key;
 				videoCollection.push(videoDataArray[key]);
 			});
 				resolve(videoCollection);
-				console.log("videoCollection from getAllSavedVideos", videoCollection );
+				console.log("videoCollection from getAllReviewVideos", videoCollection );
 
 		})
 			.catch((error)=> {
