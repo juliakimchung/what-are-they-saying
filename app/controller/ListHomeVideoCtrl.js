@@ -32,13 +32,4 @@ app.controller("ListHomeVideoCtrl", function($scope, $sce, $routeParams, $locati
 	};
 	$scope.watchHomeVideos();
 });
-  //             for (var i = 0; i < result.length; i++) {
-  //                 if (result[i].review === true) {
-  //                     let videoToReview = result[i].videoId;
-  //                     console.log("result from AddReviewVideoCtrl", videoToReview);
-  //                     // 
-              //         $scope.currentVideos.push(videoToReview);
-              //         console.log("$scope.currentVideos from AddReviewVideoCtrl", $scope.currentVideos);
-              //     }
-              // }
-               // $scope.currentVideos = result;
+            
