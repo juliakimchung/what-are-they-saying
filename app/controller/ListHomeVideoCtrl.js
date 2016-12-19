@@ -4,16 +4,16 @@ app.controller("ListHomeVideoCtrl", function($scope, $sce, $routeParams, $locati
   $scope.watchHomeVideos = function(){
     VideoFactory.getAllReviewVideos()
     .then((videoData)=> {
-    	console.log("videoData from watchHomeVideos", videoData);
-
+    	console.log("videoData from ListHomeVideoCtrl", videoData);
     	for(let i = 0; i < videoData.length; i++){
     		if(videoData[i].reviewCount > 3){
-    			let videoForHome = videoData[i].videoId;
+    			let videoForHome = videoData[i].id;
     			$scope.selectedVideos.push(videoForHome);
     			console.log("videoForHome from ListHomeVideoCtrl", $scope.selectedVideos);
 
+    			
     		}
-    	$scope.selectedVideos = videoData;
+    	//console.log("videoData from watchHomeVideos", videoData);
     	//$scope.$apply()
     	}
  //    	videoData.forEach(video in videoData){

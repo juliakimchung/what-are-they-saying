@@ -24,10 +24,10 @@ app.controller("ReviewSingleVideoCtrl", function($scope, $sce, $routeParams, $lo
         .then(function(){
             console.log("$scope.currentVideo from reviewSingleVideo function", $scope.currentVideo);
         })
-        if ($scope.currentVideo.reviewCount > 3) {
+        // if ($scope.currentVideo.reviewCount > 3) {
         
-            $location.url('/#!/home/:videoId')
-        }
+        //     $location.url('/#!/home/:videoId')
+        // }
         };
   
 
