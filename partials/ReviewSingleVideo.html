@@ -1,0 +1,15 @@
+<div class="col-md-12 SingleReviewVideo">
+
+	<h3>{{currentVideo.title}}</h3>
+
+<button class="lyric-btn" ng-click="lyrics=true">Show Lyrics</button>
+<div class="video">
+    <iframe width="850" height="550" ng-src='{{currentPath}}' frameborder="1" allowfullscreen></iframe>
+</div>
+
+ <div ng-show="lyrics">
+ 		<div class="col-md-6 lyrics">
+        <h4>{{currentVideo.lyrics}}</h4>
+    </div>
+  </div>
+ </div>

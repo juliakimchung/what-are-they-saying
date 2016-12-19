@@ -41,15 +41,7 @@ app.controller("AddReviewVideoCtrl", function($scope, $sce, $routeParams, $locat
       // });
 
 
-          // $scope.reviewVideo = function(){
-          //     VideoFactory.updateSingleVideo($routeParams.videoId, $scope.currentVideo)
-          //     .then(function(){
-          //         console.log("$scope.currentVideo from reviewVideo function", $scope.currentVideo);
-          //     })
-          //     .then(function(){
-          //         $location.url('/#!/review/:videoId')
-          //     })
-          // };
+          
   }
          $scope.watchForReview();
 });

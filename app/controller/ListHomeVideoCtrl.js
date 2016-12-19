@@ -4,6 +4,8 @@
 // 	$scope.currentVideo = {};
 // 	$scope.currentPath = "";
 
-	
+		// $scope.featuredVideo = function(){
+		// 	VideoFactory.selectedVideo
+		// }
 	
 // })

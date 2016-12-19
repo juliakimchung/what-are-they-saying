@@ -13,7 +13,7 @@ app.controller("SearchCtrl", function($scope, $http, $sce, VideoFactory, AuthFac
             $scope.data = videoObj.data.items;
             $scope.data.forEach(function(video) {
                 video.videoID = $sce.trustAsResourceUrl('http://www.youtube.com/embed/' + video.id.videoId);
-                console.log(video)
+                console.log("video from getVideo", video)
             });
             $scope.toggle = function() {
                 $scope.myVar = !$scope.myVar;

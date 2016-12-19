@@ -26,12 +26,12 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 			});
     });
   }
-  let getAllReviewVideos = (videoId) => {
+  let getAllReviewVideos = (video) => {
 		let videoCollection = [];
-		console.log("FBCreds.URL",`${FBCreds.URL}/video.json?orderBy="review"&equalTo="true"` );
+		console.log("FBCreds.URL",`${FBCreds.URL}/video.json?orderBy="review"&equalTo=true` );
 		return new Promise((resolve, reject)=> {
 
-		$http.get(`${FBCreds.URL}/video.json?orderBy="review"&equalTo="true"`)
+		$http.get(`${FBCreds.URL}/video.json?orderBy="review"&equalTo=true`)
 		// review from the firebase indexOn
 		.then((results)=> {
 			console.log("results from getAllReviewVideos", results);
