@@ -2,14 +2,19 @@
 
 	<h3>{{currentVideo.title}}</h3>
 
-<button class="lyric-btn" ng-click="lyrics=true">Show Lyrics</button>
+<button class="lyric-btn" ng-click="lyrics=true">Show Lyrics For Review</button>
 <div class="video">
-    <iframe width="850" height="550" ng-src='{{currentPath}}' frameborder="1" allowfullscreen></iframe>
+    <iframe width="1250" height="650" ng-src='{{currentPath}}' frameborder="0" allowfullscreen></iframe>
 </div>
-
+        
+        <button type="button" class="btn btn-default btn-sm" ng-click="buttonClicked()" ng-model="currentVideo.reviewCount">
+          <span class="glyphicon glyphicon-thumbs-up"></span> Like
+        </button>
+          <span >Count: {{currentVideo.reviewCount}}</span>
  <div ng-show="lyrics">
- 		<div class="col-md-6 lyrics">
+ 		<div class="col-md-12 lyrics">
         <h4>{{currentVideo.lyrics}}</h4>
     </div>
   </div>
  </div>
+<!-- ng-click="reviewCount = reviewCount + 1 " ng-init="reviewCount=0" -->

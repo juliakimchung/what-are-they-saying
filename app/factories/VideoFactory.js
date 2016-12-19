@@ -51,6 +51,32 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
     });
   }
 
+  // let getAllSelectedVideos = (video) => {
+		// let videoCollection = [];
+		// console.log("FBCreds.URL",`${FBCreds.URL}/video.json?orderBy="reviewCount"&equalTo=3++` );
+		// return new Promise((resolve, reject)=> {
+
+		// $http.get(`${FBCreds.URL}/video.json?orderBy="reviewCount"&equalTo=3++`)
+		// // review from the firebase indexOn
+		// .then((results)=> {
+		// 	console.log("results from getAllSelectedVideos", results);
+		// 	let videoDataArray = results.data;
+		// 	console.log("videoDataArray from get",videoDataArray );
+		// 	Object.keys(videoDataArray).forEach((key)=> {
+		// 		videoDataArray[key].id = key;
+		// 		videoCollection.push(videoDataArray[key]);
+		// 	});
+		// 		resolve(videoCollection);
+		// 		console.log("videoCollection from getAllSelectedVideos", videoCollection );
+
+		// })
+		// 	.catch((error)=> {
+		// 		console.log("error",error );
+		// 	});
+  //   });
+  // }
+
+
   let saveVideo = function(video, user){
  		//console.log("FBCreds.URL", `${FBCreds.URL}`, "FBCreds.URL", "${FBCreds.URL}");
 

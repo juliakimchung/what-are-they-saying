@@ -1,7 +1,7 @@
 "use strict";
 app.controller("EditVideoCtrl", function($scope, $sce, $routeParams, $location, $interpolate, VideoFactory, AuthFactory, SearchTermData) {
     console.log("EditVideoCtrl", $routeParams.videoId);
-
+    $scope.searchText = SearchTermData;
     $scope.currentVideo = {};
     $scope.currentPath = "";
     $scope.watchYourVideo = () => {

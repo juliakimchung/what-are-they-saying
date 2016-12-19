@@ -1,43 +1,36 @@
 "use strict";
 app.controller("ReviewSingleVideoCtrl", function($scope, $sce, $routeParams, $location, $interpolate, VideoFactory, AuthFactory, SearchTermData) {
     console.log("ReviewSingleVideoCtrl", $routeParams.videoId);
-
     $scope.currentVideo = {};
     $scope.currentPath = "";
-    $scope.watchYourVideo = () => {
+    $scope.currentVideo.reviewCount = 0;
+    $scope.watchForReview = () => {
         VideoFactory.getSingleVideo($routeParams.videoId)
-            .then((response) => {
-                let videoToPlay = response.data.videoId;
-             // $routeParams.videoId = response.data.videoId;
-             // $routeParams.videoId can't be redefined.
-                console.log("response from EditVideoCtrl", response);
+            .then((result) => {
+                let videoToPlay = result.data.videoId;
+                console.log("result from ReviewSingleVideoCtrl", result);
   
-                $scope.currentVideo = response.data;
+                $scope.currentVideo = result.data;
                 $scope.currentPath = $sce.trustAsResourceUrl(`http://www.youtube.com/embed/${videoToPlay}`)
                 console.log("$scope.currentPath", $scope.currentPath);
                 $scope.$apply();
 
             });       
     };
-    $scope.editVideo = function() {
-      VideoFactory.updateSingleVideo($routeParams.videoId, $scope.currentVideo)
-            .then(function() {
-             console.log("$scope.currentVideo from edit Video",$scope.currentVideo);
-            })
-            .then(function() {
-              $location.url('/#!/collection');
-            })
-      
-    };
-    // $scope.reviewVideo = function(){
-    //     VideoFactory.updateSingleVideo($routeParams.videoId, $scope.currentVideo)
-    //     .then(function(){
-    //         console.log("$scope.currentVideo from reviewVideo function", $scope.currentVideo);
-    //     })
-    //     .then(function(){
-    //         $location.url('/#!/review/:videoId')
-    //     })
-    // };
-   $scope.watchYourVideo();
+    $scope.buttonClicked = () => {
+        $scope.currentVideo.reviewCount++;
+        console.log("$scope.reviewCount from buttonClicked()", $scope.reviewCount);
+         VideoFactory.updateSingleVideo($routeParams.videoId, $scope.currentVideo)
+        .then(function(){
+            console.log("$scope.currentVideo from reviewSingleVideo function", $scope.currentVideo);
+        })
+        if ($scope.currentVideo.reviewCount > 3) {
+        
+            $location.url('/#!/home/:videoId')
+        }
+        };
+  
+
+   $scope.watchForReview();
 });
 

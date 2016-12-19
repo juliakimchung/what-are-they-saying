@@ -1,11 +1,13 @@
-$font-stack:    Helvetica, sans-serif;
+$font-stack:    Ariel, sans-serif;
 $primary-color: #333;
 
 
+h3 {
+	font-color: blue;
+}
 
-
-.lyrics {
+body {
 	font-size: .5em;
-	
+	font-color: blue;
 
 }
