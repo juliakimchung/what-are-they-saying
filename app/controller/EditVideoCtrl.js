@@ -8,8 +8,6 @@ app.controller("EditVideoCtrl", function($scope, $sce, $routeParams, $location, 
         VideoFactory.getSingleVideo($routeParams.videoId)
             .then((response) => {
                 let videoToPlay = response.data.videoId;
-             // $routeParams.videoId = response.data.videoId;
-             // $routeParams.videoId can't be redefined.
                 console.log("response from EditVideoCtrl", response);
   
                 $scope.currentVideo = response.data;
@@ -29,15 +27,7 @@ app.controller("EditVideoCtrl", function($scope, $sce, $routeParams, $location, 
             })
       
     };
-    // $scope.reviewVideo = function(){
-    //     VideoFactory.updateSingleVideo($routeParams.videoId, $scope.currentVideo)
-    //     .then(function(){
-    //         console.log("$scope.currentVideo from reviewVideo function", $scope.currentVideo);
-    //     })
-    //     .then(function(){
-    //         $location.url('/#!/review/:videoId')
-    //     })
-    // };
+    
    $scope.watchYourVideo();
 });
 

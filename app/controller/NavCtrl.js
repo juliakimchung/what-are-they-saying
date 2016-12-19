@@ -12,7 +12,7 @@ app.controller("NavCtrl", function($scope, SearchTermData, AuthFactory){
 
 	},
 		{name: 'All Videos',
-		 url: '#/videos/list'
+		 url: '#/videos/home'
 	},
 		{name: 'My Video Collection',
 		 url: '#/video/collection'

@@ -1,13 +1,10 @@
 <div class="col-md-12 editVideo">
 
 	<h3>{{currentVideo.title}}</h3>
-<!-- <iframe width="850" height="500" ng-src= 'http://www.youtube.com/embed/tiV4yyZF4mc' frameborder="1" allowfullscreen></iframe> -->
 <button class="lyric-btn" ng-click="lyrics=true">Show Lyrics/Write Lyrics</button>
 <div class="video">
-    <iframe width="1100" height="650" ng-src='{{currentPath}}' frameborder="0" allowfullscreen></iframe>
+    <iframe width="1000" height="600" ng-src='{{currentPath}}' frameborder="0" allowfullscreen></iframe>
 </div>
-<!-- <button class="btnx" ng-click="removeVideo(currentVideo)">Delete Video</button> -->
-<!-- <a class="anc" ng-href="/#!/edit/:videoId">Watch Video</a> -->
  <div ng-show="lyrics">
  		<div class="col-md-6 text">
     	<textarea rows="12" placeholder="Place your lyrics here" ng-model="currentVideo.lyrics"></textarea><br>
