@@ -9,7 +9,8 @@ app.controller("SearchCtrl", function($scope, $http, $sce, VideoFactory, AuthFac
                 type: 'video',
                 q: value+"kpop"
             }
-        }).then(function(videoObj) {
+        })
+        .then(function(videoObj) {
             $scope.data = videoObj.data.items;
             $scope.data.forEach(function(video) {
                 video.videoID = $sce.trustAsResourceUrl('http://www.youtube.com/embed/' + video.id.videoId);
@@ -18,7 +19,8 @@ app.controller("SearchCtrl", function($scope, $http, $sce, VideoFactory, AuthFac
             $scope.toggle = function() {
                 $scope.myVar = !$scope.myVar;
             };
-        }).catch((error)=>{
+        })
+        .catch((error)=>{
           console.log("error",error );
         });
     };
