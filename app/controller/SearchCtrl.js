@@ -1,13 +1,13 @@
 "use strict";
 app.controller("SearchCtrl", function($scope, $http, $sce, VideoFactory, AuthFactory, SearchTermData, $interpolate, $location) {
 
-    $scope.getVideo = function(val) {
+    $scope.getVideo = function(value) {
         $http.get('https://www.googleapis.com/youtube/v3/search', {
             params: {
                 key: 'AIzaSyDmRXSz9KWkx_GKTCwOhXtyHrFnqBF7u2E',
                 part: 'snippet',
                 type: 'video',
-                q: val+"kpop"
+                q: value+"kpop"
             }
         }).then(function(videoObj) {
             $scope.data = videoObj.data.items;

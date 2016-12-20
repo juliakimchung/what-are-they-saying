@@ -28,7 +28,7 @@ $scope.searchText = SearchTermData;
               //         console.log("$scope.currentVideos from AddReviewVideoCtrl", $scope.currentVideos);
               //     }
               // }
-               // $scope.currentVideos = result;
+               // 
               
               // $scope.currentVideos.forEach(function(currentVideo) {
               //     currentVideo = $sce.trustAsResourceUrl(`http://www.youtube.com/embed/${currentVideo.videoId}`)
