@@ -8,12 +8,9 @@
 </head>
 <body ng-app="K-PopTranslateApp">
 <div ng-include="'partials/Nav.html'"></div>
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1 main-container">
-      <div class="col-xs-12" ng-view> 
-     </div>
- </div>
- </div>
+
+  <div ng-view></div>
+<div ng-include="'partials/Footer.html'"></div>
 
   <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js">
