@@ -1,4 +1,4 @@
-// "use strict";
+ "use strict";
 app.controller("ListHomeVideoCtrl", function($scope, $sce, $routeParams, $location, $interpolate, VideoFactory, AuthFactory, SearchTermData) {
 	$scope.selectedVideos = [];
 	$scope.serchText = SearchTermData;
