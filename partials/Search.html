@@ -1,18 +1,66 @@
-<div>
-		<div class="text-center container">
-				<img src="#"><h1 id="head">Search</h1>
-		</div>
-		<h5 class="search">Search your favorite K-Pop</h5>
-		<form>
-			<input type="text" id="query" ng-model="query" placeholder="Search your favorite K-pop" class="form-control">
-
-			<button class="btn" ng-click="getVideo(query)">preview
-			</button>
-			<br>
-		</form>
+<section class="container-fluid loginCon">
 		
-	</div>
+	<!-- <img src="images/k-fans11.jpg" class="kfans">
+	<img src="images/k-fans12.jpg" class="kfans">
+	<img src="images/k-fans13.jpeg" class="kfans">
+	<img src="images/k-fans14.jpg" class="kfans">
+	<img src="images/k-fans25.jpg" class="kfans">
+	<img src="images/k-fans17.jpg" class="kfans">
+	<img src="images/k-fans18.jpg" class="kfans">
+	<img src="images/k-fans27.jpg" class="kfans">
+	<img src="images/k-fans21.jpeg" class="kfans">
+	<img src="images/k-fans22.jpg" class="kfans">
+	<img src="images/k-fans23.jpg" class="kfans">
+	<img src="images/k-fans24.jpg" class="kfans">
+	<img src="images/k-fans25.jpg" class="kfans">
+	<img src="images/k-fans26.jpg" class="kfans">
+	<img src="images/k-fans27.jpg" class="kfans">
+	<img src="images/k-fans28.jpeg" class="kfans">
+	<img src="images/k-fans29.jpg" class="kfans">
+	<img src="images/k-fans30.jpeg" class="kfans">
+	<img src="images/k-fans31.jpeg" class="kfans">
+	<img src="images/k-fans33.jpg" class="kfans">
+	<img src="images/k-fans34.jpg" class="kfans">
+	<img src="images/kfans1.jpg" class="kfans">
+	<img src="images/kfans10.jpg" class="kfans">
+	<img src="images/kfans11.jpg" class="kfans">
+	<img src="images/kfans13.jpg" class="kfans">
+	<img src="images/kfans14.jpg" class="kfans">
+	<img src="images/kfans15.jpg" class="kfans">
+	<img src="images/k-fans36.jpeg" class="kfans">
+	<img src="images/k-fans39.jpeg" class="kfans">
+	<img src="images/k-fans40.jpg" class="kfans">
+	<img src="images/k-pop2.jpg" class="kfans">
+	<img src="images/k-popfans1.jpeg" class="kfans">
+	<img src="images/k-popfans15.jpg" class="kfans">
+	<img src="images/k-popfans16.jpg" class="kfans">
+	<img src="images/k-popfans2.jpg" class="kfans">
+	<img src="images/k-popfans3.jpeg" class="kfans">
+	<img src="images/k-popfans4.jpeg" class="kfans">
+	<img src="images/k-popfans6.jpeg" class="kfans">
+	<img src="images/k-popimage7.jpeg" class="kfans">
+	<img src="images/k-popimage8.jpg" class="kfans">
+	<img src="images/k-popimage8.png" class="kfans">
+	<img src="images/k-popimage9.jpg" class="kfans">
+	 -->
+	<h1 id="head" class="notification notification-confirm">Search</h1>
+		
+		<div class="row ">
+    	<div class="col-md-8">
+				<!-- <h5 class="search">Search your favorite K-Pop</h5> -->
+					
+						<input type="text"  id="query" ng-model="query" placeholder="Search your favorite K-pop" class="form-control inputSearch">
+
+						<button class="btn-info notification notification-warning previewBtn" ng-click="getVideo(query)">preview
+						</button>
+						<br>
+				
+				</div>
+		</div>
+</section>		
+		</div>
 	<article class="col-md-12 box">
+
 		<div class="col-md-4" id="video1" ng-repeat="video in data">
 			<div class="video{{data.indexOf(video)+1}}">
 				<strong><p id="title">{{video.snippet.title}}</p></strong>

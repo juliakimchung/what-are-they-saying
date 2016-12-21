@@ -1,7 +1,7 @@
  "use strict";
 app.controller("ListHomeVideoCtrl", function($scope, $sce, $routeParams, $location, $interpolate, VideoFactory, AuthFactory, SearchTermData) {
-	$scope.selectedVideos = [];
-	$scope.serchText = SearchTermData;
+	$scope.searchText = SearchTermData;
+    $scope.selectedVideos = [];
   $scope.watchHomeVideos = function(){
     VideoFactory.getAllReviewVideos()
     .then((videoData)=> {
