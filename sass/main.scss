@@ -1,75 +1,50 @@
 $font-stack:    Ariel, sans-serif;
 $primary-color: #333;
 
-@function set-notification-text-color($color) {
-  @if (lightness($color) > 50) {
-    @return #000000; // Lighter backgorund, return dark color
-  } @else {
-    @return #ffffff; // Darker background, return light color
-  }
-}
 
-$notification-confirm: hsla(101, 72%, 37%, 1);  // Green
-$notification-warning: #ffc53a;                 // Yellow
-
-.notification-confirm {
-  border-radius: 10px;
-  display: block;
-  font-size: 3em;
-  font-family: sans-serif;
-  padding: .25em .25em;
-  margin: .5em auto;
-  width: 30%;
-  text-align: center;
-  margin-left: 575px;
-}
-.notification-warning {
-  border-radius: 10px;
-  display: block;
-  font-size: 1em;
-  font-family: sans-serif;
-  padding: 1em 2em;
-  margin: 1em auto;
-  width: 15%;
-  text-align: center;
-  margin-right: 750px;
-}
-.previewBtn {
-	margin-left: 735px;
-}
-
-
-.notification-confirm {
-  background: $notification-confirm;
-  color: set-notification-text-color($notification-confirm);
-}
-.notification-warning {
-  background: $notification-warning;
-  color: set-notification-text-color($notification-warning);
-}
 .inputBox {
 	max-width: 700px;
 	max-height: 350px;
-	margin-left: 200px;
+	border-radius: 10px;
+	
+	background-color: #FDFFEE;
+
+}
+input {
+	background-color: #FDFFEE;
+	border-radius: 8px;
 }
 
-
 .inputSearch {
+	margin-top: 20px;
 	margin-left: 530px;
 	height: 50px;
 	width: 600px;
 	border-radius: 10px;
 }
 
-.navbar {
-	background: c46bff;
+.searchBtn {
+	margin-left: 600px;
+	width: 70px;
+	height: 35px;
+	border-radius: 8px;
+	margin-top:8px;
+	margin-bottom: 8px;
+}
+
+li a {
+	
+	color: #ffffff;
+}
+.footer {
+	background-color:#B27D6B;
 }
 
 textarea {
 	width: 100%;
 	margin-top: 10px;
 }
-
+	
 iframe {
 	margin: 20px;
 }
@@ -91,48 +66,26 @@ iframe {
 	max-width: 1300px;
 	max-height: 1300px;
 }
+  
 
-.loginCon {
-	background: url(images/k-fans11.jpg) 2% no-repeat,
-  url(images/k-fans12.jpg)2% no-repeat, 
-  url(images/k-fans28.jpeg)2% no-repeat, 
- url(images/k-fans29.jpg)2% no-repeat,
- url(images/k-fans31.jpeg)2% no-repeat,
- url(images/k-fans33.jpg)2% no-repeat,
- url(images/k-fans14.jpg)2% no-repeat, 
- url(images/k-fans26.jpg)2% no-repeat,
-  url(images/k-fans28.jpeg)2% no-repeat, 
- url(images/k-fans29.jpg)2% no-repeat,
- url(images/k-fans30.jpeg)2% no-repeat,
- url(images/k-fans31.jpeg)2% no-repeat,
- url(images/k-fans33.jpg)2% no-repeat, 
- url(images/k-fans13.jpeg)2% no-repeat, 
- url(images/k-fans14.jpg)2% no-repeat,
- url(images/k-fans26.jpg)2% no-repeat, 
+
+body {
+	background: url(images/girlsgen.jpg) repeat;
+ /*url(images/k-fans31.jpeg)2% no-repeat,
+ url(images/k-fan10.jpeg )5% no-repeat,
+ url(images/k-fans11.jpg)2% no-repeat,
  url(images/k-fans25.jpg)2% no-repeat, 
- url(images/k-fans18.jpg)2% no-repeat, 
  url(images/k-fans19.jpeg)2% no-repeat, 
- url(images/k-fans27.jpg)2% no-repeat, 
- url(images/k-fans21.jpeg)5% no-repeat, 
  url(images/k-fans22.jpg)5% no-repeat, 
- url(images/k-fans23.jpg)5% no-repeat,
- url(images/k-fans24.jpg)5% no-repeat, 
  url(images/k-fans25.jpg)5% no-repeat,
  url(images/k-fans26.jpg)5% no-repeat,
- url(images/k-fans27.jpg)5% no-repeat,
  url(images/k-fans28.jpeg)5% no-repeat, 
- url(images/k-fans29.jpg )5% no-repeat,
- url(images/k-fans30.jpeg )5% no-repeat,
- url(images/k-fans31.jpeg )5% no-repeat,
- url(images/k-fans33.jpg )5% no-repeat,
  url(images/k-fans34.jpg )5% no-repeat,
  url(images/k-fans35.jpeg )5% no-repeat,
- url(images/k-fans35.jpg )5% no-repeat,
  url(images/k-fans36.jpeg )5% no-repeat,
- url(images/k-fans39.jpeg )5% no-repeat,
  url(images/k-fans40.jpg )5% no-repeat,
+ url(images/k-fans39.jpeg )5% no-repeat,
  url(images/k-pop2.jpg )5% no-repeat,
- url(images/k-popfans1.jpeg)5% no-repeat, 
  url(images/k-popfans15.jpg)5% no-repeat,
  url(images/k-popfans16.jpg )5% no-repeat,
  url(images/k-popfans2.jpg )5% no-repeat,
@@ -142,5 +95,11 @@ iframe {
  url(images/k-popimage7.jpeg )5% no-repeat,
  url(images/k-popimage8.jpg )5% no-repeat,
  url(images/k-popimage8.png)5% no-repeat,
- url(images/k-popimage9.jpg)5% no-repeat;
+ url(images/k-popimage9.jpg)5% no-repeat;*/
 }
+
+.navBar{
+	background-color: #FFD9CC;
+}
+
+

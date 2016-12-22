@@ -1,4 +1,4 @@
-<div class="container-fluid loginCon">
+<div class="container loginCon">
   <!-- <img src="images/k-fans11.jpg" class="kfans">
   <img src="images/k-fans12.jpg" class="kfans">
   <img src="images/k-fans13.jpeg" class="kfans">
@@ -43,7 +43,7 @@
   <h2 class="notification notification-confirm"> Welcome! </h2>
   <div class="row loginScreen">
     <div class="col-sm-offset-1 col-md-offset-2">
-       <!-- <p class="notification notification-warning"> Login or Register Below </p> -->
+       
       
          <div class="inputBox">
           <input type="email" name="email" placeholder="Email*" class="form-control" ng-model="account.email">
@@ -51,12 +51,12 @@
          <div class="inputBox">
           <input type="password" name="password" placeholder="Password*" class="form-control" ng-model="account.password">
          </div>
-         <div class="inputBox">
+        <!--  <div class="inputBox">
           <input type="text" name="username" placeholder="Username*" class="form-control" ng-model="account.username">
-         </div>
+         </div> -->
          <div>
-           <button class="btn btn-info notification notification-warning" ng-click="login()">Login</button>
-           <button class="btn btn-info notification notification-warning" ng-click="register()">Register</button>
+           <button class="btn btn-info" ng-click="login()">Login</button>
+           <button class="btn btn-info" ng-click="register()">Register</button>
 
         </div>
   
