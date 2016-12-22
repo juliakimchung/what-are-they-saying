@@ -1,9 +1,8 @@
 "use strict";
-app.controller("FooterCtrl", function($scope, AuthFactory){
-	//$scope.AuthFactory= logoutUser();
+app.controller("FooterCtrl", function($scope){
 	$scope.footerItems = [
 	{name: "copyright",
 		App: "K-PopTranslateApp"
 	}
 	]
-})
+});

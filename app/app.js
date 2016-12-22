@@ -51,6 +51,11 @@ let isAuth = (AuthFactory) => new Promise((resolve, reject)=> {
     	controller: "ReviewSingleVideoCtrl",
     	resolve: {isAuth}
     })
+    .when('/footer', {
+        templateUrl: 'partials/Footer.html',
+        controller: 'FooterCtrl',
+        resolve: {isAuth}
+    })
 
 	.otherwise("/");
 
