@@ -1,6 +1,9 @@
 $font-stack:    Ariel, sans-serif;
 $primary-color: #333;
 
+/*@import "compass/css3";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);*/
 
 .inputBox {
 	max-width: 600px;
@@ -84,6 +87,9 @@ iframe {
 .searchArticle{
 	margin-bottom: 55px;
 }
+.loginBtn {
+	background-color: #653738;
+}
 
 .loginCon {
 	max-width: 100%;
@@ -117,7 +123,9 @@ iframe {
 }
 
 .navBar{
-	background-color: #FFD9CC;
+	background-color: #FFE2C5;
 }
 
-
+body {
+	background-color: #FFEEDD;
+}
