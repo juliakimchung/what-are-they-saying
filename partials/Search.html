@@ -1,4 +1,5 @@
-<section class="container-fluid loginCon">
+
+	<section class="container-fluid searchCon">
 		
 	<!-- <img src="images/k-fans11.jpg" class="kfans">
 	<img src="images/k-fans12.jpg" class="kfans">
@@ -49,17 +50,17 @@
     	<div class="col-md-8">
 				<!-- <h5 class="search">Search your favorite K-Pop</h5> -->
 					
-						<input type="text"  id="query" ng-model="query" placeholder="Search your favorite K-pop" class="form-control inputSearch">
+						<input type="text"  id="query" ng-model="query" placeholder="Search your favorite K-pop" class="form-control inputSearch" ng-keypress="getVideo(query)">
 
-						<button class="btn-info searchBtn" ng-click="getVideo(query)">search
+						<!-- <button class="btn-info searchBtn" ng-click="getVideo(query)">search
 						</button>
-						<br>
+						<br> -->
 				
 				</div>
 		</div>
 </section>		
-		</div>
-	<article class="col-md-12 box">
+		
+	<article class="col-md-12 box searchArticle" >
 
 		<div class="col-md-4" id="video1" ng-repeat="video in data">
 			<div class="video{{data.indexOf(video)+1}}">

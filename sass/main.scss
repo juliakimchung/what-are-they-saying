@@ -3,11 +3,12 @@ $primary-color: #333;
 
 
 .inputBox {
-	max-width: 700px;
-	max-height: 350px;
+	max-width: 600px;
+	max-height: 450px;
 	border-radius: 10px;
+	margin-top: 703px;
 	
-	background-color: #FDFFEE;
+	color: #FDFFEE;
 
 }
 input {
@@ -16,7 +17,7 @@ input {
 }
 
 .inputSearch {
-	margin-top: 20px;
+	margin-top: 475px;
 	margin-left: 530px;
 	height: 50px;
 	width: 600px;
@@ -51,10 +52,15 @@ iframe {
 }
 
 .lyrics {
-	height: 450p;
+	height: 450px;
 	overflow: scroll;
-}
 
+}
+.lyricsReview {
+	overflow: scroll;
+	width: 1100px;
+	height:200px
+}
 .searchNav {
 	margin-top: 8px;
 }
@@ -70,12 +76,18 @@ iframe {
   
 .container {
 	margin-top: 40px;
+	margin-bottom: 75px;
+}
+.searchCon {
+	background: url(images/girlgen2.png) repeat;
+}
+.searchArticle{
 	margin-bottom: 55px;
 }
 
-body {
+.loginCon {
 	max-width: 100%;
-	max-height: 100%;
+	max-height: 1250px;
 	background: url(images/girlsgen.jpg) repeat;
  /*url(images/k-fans31.jpeg)2% no-repeat,
  url(images/k-fan10.jpeg )5% no-repeat,

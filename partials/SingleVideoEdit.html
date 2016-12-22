@@ -1,6 +1,6 @@
-<div class="container-fluid editVideo">
+<div class="container-fluid editVideo ">
   <h3>{{currentVideo.title}}</h3>
-  <button class="lyric-btn" ng-click="lyrics=true">Show Lyrics/Write Lyrics</button>
+  <button class="lyric-btn btn" ng-click="lyrics=true">Show Lyrics/Write Lyrics</button>
   <div class="row">
     <div class="video col-md-8 embed-responsive embed-responsive-16by9">
       <iframe class="embed-responsive-item"  width="560" height="349" ng-src='{{currentPath}}' allowfullscreen></iframe>
@@ -9,7 +9,7 @@
       
       <div class="text">
         <textarea rows="12" placeholder="Place your lyrics here" ng-model="currentVideo.lyrics"></textarea><br>
-        <button class=btn ng-click="editVideo()">Save in your collection</button><br>
+        <button class="btn" ng-click="editVideo()">Save in your collection</button><br>
         <input type="checkbox" ng-checked="false" ng-model="currentVideo.review">For Review
           <!-- this checkbox is to send the info to the data for the review page to show the data when it's called-->
       </div>
