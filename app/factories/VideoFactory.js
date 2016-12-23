@@ -2,8 +2,9 @@
 app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 	
 	let fireUser = AuthFactory.getUser();
+ 	let users = AuthFactory.saveUserToFB();
 	console.log("fireUser", fireUser);
-
+	
 	let getAllSavedVideos = (video) => {
 		let videoCollection = [];
 		//console.log("FBCreds.URL",`${FBCreds.URL}/video.json?orderBy="uid"&equalTo="${fireUser}"` );
@@ -52,9 +53,13 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
   }
 
   
-  let saveVideo = function(video, user){
+  let saveVideo = function(video, users){
  		//console.log("FBCreds.URL", `${FBCreds.URL}`, "FBCreds.URL", "${FBCreds.URL}");
-
+	// console.log("userInfo from VideoFactory", AuthFactory.saveUserToFB());
+ 		if(video.id.uid === users.uid){
+ 			let username = users.displayName;
+ 			 console.log("username from saveVideo", username);
+ 		}
 		let newVideo = {
 			title: video.snippet.title,
 			videoId: video.id.videoId,
@@ -62,8 +67,10 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 			pic: video.snippet.thumbnails.medium,
 			lyrics: "",
 			review: false,
-			reviewCount: 0
+			reviewCount: 0,
+			username:""
 		}
+
 		console.log("currentUser", fireUser );
 		return new Promise((resolve, reject)=> {
 			$http.post(`${FBCreds.URL}/video.json`, angular.toJson(newVideo))

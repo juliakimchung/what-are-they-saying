@@ -6,10 +6,11 @@ $primary-color: #333;
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);*/
 
 .inputBox {
-	max-width: 600px;
-	max-height: 450px;
+	margin-top: 475px;
+	margin-left: 230px;
+	height: 50px;
+	width: 600px;
 	border-radius: 10px;
-	margin-top: 703px;
 	
 	color: #FDFFEE;
 
@@ -62,7 +63,7 @@ iframe {
 .lyricsReview {
 	overflow: scroll;
 	width: 1100px;
-	height:200px
+	height:100px
 }
 .searchNav {
 	margin-top: 8px;
@@ -89,12 +90,17 @@ iframe {
 }
 .loginBtn {
 	background-color: #653738;
+	
+}
+.loginRegister {
+	margin-left: 470px;
+	margin-top: 60px;
 }
 
 .loginCon {
 	max-width: 100%;
 	max-height: 1250px;
-	background: url(images/girlsgen.jpg) repeat;
+	background: url(images/girlsgen.png) repeat;
  /*url(images/k-fans31.jpeg)2% no-repeat,
  url(images/k-fan10.jpeg )5% no-repeat,
  url(images/k-fans11.jpg)2% no-repeat,
