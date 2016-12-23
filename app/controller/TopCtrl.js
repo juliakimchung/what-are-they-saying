@@ -20,6 +20,8 @@ app.controller("TopCtrl", function($scope, $location, $window, AuthFactory){
 		return currentUser;
 	};
 
+	
+
 	$scope.logout = function(){
 		AuthFactory.loggoutUser()
 		.then(function(data){

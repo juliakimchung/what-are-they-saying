@@ -23,11 +23,11 @@ app.controller("LoginCtrl", function($scope, AuthFactory, $window){
 			AuthFactory.saveUserToFB(userObj)
 			.then(()=> {
 				console.log("user saved from LoginCtrl", userObj);
-				$scope.$apply();
 			})
 			.catch((error)=> {
 				
 				console.log("error creating user account" );
+				$scope.$apply();
 			})
 		});
 	};
