@@ -30,10 +30,6 @@ app.factory("AuthFactory", function($window, $http, FBCreds) {
         return currentUser;
     };
 
-     let getUserId = () => {
-        return firebase.auth().currentUser.uid;
-     }
-    
     let saveUserToFB = (userObj)=>{
         return new Promise ((resolve, reject)=>{
             $http.post(`${FBCreds.URL}/users.json`, angular.toJson(userObj))
@@ -60,7 +56,7 @@ app.factory("AuthFactory", function($window, $http, FBCreds) {
                     usersArray[key].id = key;
                     allUsers.push(usersArray[key]);
                 })
-                console.log("users from getAllUsers",users );
+                console.log("users from getAllUsers",allUsers );
                 resolve(allUsers);
             })
 

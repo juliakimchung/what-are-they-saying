@@ -102,9 +102,7 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 			})
 		});
 	};
-	// `${FBCreds.URL}/video/${videoId}.json`
-	// `${FBCreds.URL}/${fireUser}/video/${videoId}.json`
-// `${FBCreds.URL}/video.json?orderBy="uid"&equalTo="${fireUser}"`
+	
 	let updateSingleVideo = (videoId, lyricVideo)=> {
 			return new Promise((resolve, reject) =>{
 				$http.patch(`${FBCreds.URL}/video/${videoId}.json`, angular.toJson(lyricVideo))
@@ -116,9 +114,7 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 				})
 			});
 	};
-	//${FBCreds.URL}${fireUser}/video/${videoId}.json
-	// ${fireUser}/video/${videoId}.json
-// `${FBCreds.URL}/video/${videoId}.json`
+	
 	let deleteVideo = (videoId) => {
 		return new Promise((resolve, reject)=> {
 			$http.delete(`${FBCreds.URL}/video/${videoId}.json`)
