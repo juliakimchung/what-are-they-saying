@@ -69,22 +69,9 @@ app.factory("AuthFactory", function($window, $http, FBCreds) {
             });
         });
     };
+      
 
 
-
-//     let getUserName = (users) => {
-//         users = getAllUsers()
-//          .then((userData)=>{
-//              console.log("result from users=AuthFactory.getAllUsers()", userData );
-//              userData.forEach((user)=>{
-//                 if(currentUser === user.uid){
-//                     let username = user.displayName;
-//                     console.log("username from saveVideo", username);
-//                     return username;
-//                 }
-//             })
-//         })
-// }
 
     return { createUser, loginUser, logoutUser, isAuthenticated, getUser,  saveUserToFB, getAllUsers  }
 

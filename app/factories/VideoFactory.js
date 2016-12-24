@@ -52,55 +52,43 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
     });
   }
   
-  let saveUserName = (users)=> {
-  	users = AuthFactory.getAllUsers()
-  	.then((userData)=> {
-  		userData.forEach((user)=> {
-  			if(fireUser === user.uid){
-  				let username = user.displayName;
-  			  console.log("username from saveVideo", username);
-  				return(username);
-				}
-  		})
-  	})
-  }
 	  
-  let saveVideo = function(video, users){
- 		//console.log("FBCreds.URL", `${FBCreds.URL}`, "FBCreds.URL", "${FBCreds.URL}");
-	 		users = saveUserName();
-		 
-						let newVideo = {
-							title: video.snippet.title,
-							videoId: video.id.videoId,
-							uid: fireUser,
-							pic: video.snippet.thumbnails.medium,
-							lyrics: "",
-							review: false,
-							reviewCount: 0,
-							username: users
-						}
-						console.log("newVideo from saveVideo",newVideo );
-				return new Promise((resolve, reject)=> {
+  let saveVideo = function(video, allUsers){
+		
+	 allUsers = AuthFactory.getAllUsers()
+		.then((userData)=>{
+		console.log("result from users=AuthFactory.getAllUsers()", userData );
+		userData.forEach((user)=>{
+ 		if(fireUser === user.uid){
+ 			let userName = user.displayName;
+ 	 	 	console.log("username from saveVideo", userName);
+ 		
+				let newVideo = {
+					title: video.snippet.title,
+					videoId: video.id.videoId,
+					uid: fireUser,
+					pic: video.snippet.thumbnails.medium,
+					lyrics: "",
+					review: false,
+					reviewCount: 0,
+					username: userName
+				}
+				console.log("newVideo from saveVideo", newVideo);
+			return new Promise((resolve, reject)=> {
 				$http.post(`${FBCreds.URL}/video.json`, angular.toJson(newVideo))
 				.then((itemObject) => {
 					resolve(itemObject);
 					console.log("itemObject after saveVideo promise", itemObject);
-					})
-					.catch((error)=> {
-					console.log("error", error);
+				})
+				.catch((error)=> {
+				console.log("error", error);
 				});
-		 		});
-						
+			});
+		}
+	
+	 })
+	})
 	}
-	
-		
-	
-		
-	
-
-	
-
-	
 
 	let getSingleVideo = (videoId)=> {
 		console.log("videoId from getSingleVideo", videoId);
@@ -143,6 +131,6 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 		});
 	};
 
-	return { updateSingleVideo, getAllSavedVideos, saveVideo, deleteVideo, getSingleVideo, getAllReviewVideos, saveUserName };
+	return { updateSingleVideo, getAllSavedVideos, saveVideo, deleteVideo, getSingleVideo, getAllReviewVideos};
 
 });
