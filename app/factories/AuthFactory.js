@@ -29,7 +29,7 @@ app.factory("AuthFactory", function($window, $http, FBCreds) {
 
         return currentUser;
     };
-
+// <---------this is to save user obj in the firebase to retrieve username in the VideoFactory------->//
     let saveUserToFB = (userObj)=>{
         return new Promise ((resolve, reject)=>{
             $http.post(`${FBCreds.URL}/users.json`, angular.toJson(userObj))

@@ -28,7 +28,6 @@ app.controller("SearchCtrl", function($scope, $http, $sce, VideoFactory, AuthFac
      $scope.saveToMyVideos = function(video){
       VideoFactory.saveVideo(video)
       .then(function(){
-        // $location.url('/#!/search')
         console.log("video from saveVideos", video );
       })
       .catch((error)=>{

@@ -56,7 +56,7 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
   let saveVideo = function(video, allUsers){
 		
 	 allUsers = AuthFactory.getAllUsers()
-		.then((userData)=>{
+	 .then((userData)=>{
 		console.log("result from users=AuthFactory.getAllUsers()", userData );
 		userData.forEach((user)=>{
  		if(fireUser === user.uid){
@@ -71,7 +71,8 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 					lyrics: "",
 					review: false,
 					reviewCount: 0,
-					username: userName
+					username: userName,
+					caption: false
 				}
 				console.log("newVideo from saveVideo", newVideo);
 			return new Promise((resolve, reject)=> {
@@ -86,8 +87,8 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 			});
 		}
 	
-	 })
-	})
+	 });
+	});
 	}
 
 	let getSingleVideo = (videoId)=> {

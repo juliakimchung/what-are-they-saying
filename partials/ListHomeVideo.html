@@ -1,14 +1,14 @@
 <div class="text-center container">
-		<h1 id="head">Home </h1>
+		<h2 id="head">Home </h2>
 
 	<div class=""></div>
 		<article class="col-md-4 box" ng-repeat="video in selectedVideos|filter:{title: searchText.search}">
 				<strong><p id="title">{{video.title}}</p></strong>
-				<strong><p id="username">Translated by: {{video.username}}</p></strong>
-				<div class="video">
+				<!-- <strong><p id="username">Translated by: {{video.username}}</p></strong> -->
+				<div class="videoPic">
 					<img ng-src="{{video.pic.url}}">
 				</div>
-				<button><a class="watch" class="btn" ng-href="/#!/lyric/{{video.id}}">Watch</a></button>
+				<button><a class="watch" class="btn" ng-href="/#!/lyric/{{video.id}}">Translated by: {{video.username}}</a></button>
 				<!-- <div class="col-md-12 lyrics">
 					<h4 id="lyrics">{{video.lyrics}}</h4>
 				</div> -->
