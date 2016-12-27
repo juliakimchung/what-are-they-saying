@@ -10,14 +10,15 @@
       embed-responsive-16by9">
         <iframe class="embed-responsive-item"  width="560" height="349" ng-src='{{currentPath}}' allowfullscreen></iframe>
     </div>
+    
     <div class="lyrics-wrapper col-md-4">  
-    <button type="button" class="btn btn-default btn-sm btn" ng-click="buttonClicked()" ng-model="currentVideo.reviewCount">
+      <button type="button" class="btn btn-default btn-sm btn" ng-click="buttonClicked()" ng-model="currentVideo.reviewCount">
       <span class="glyphicon glyphicon-thumbs-up"></span> Like
-    </button>
+      </button>
       <span >Count: {{currentVideo.reviewCount}}</span>
       <div class="lyrics" ng-show="lyrics">
     
-        <p class="lyricsSize">{{currentVideo.lyrics}}</p>
+        <string><p class="lyricsSize">{{currentVideo.lyrics}}</p></string>
       </div>
     </div>
   </div>

@@ -22,9 +22,9 @@ app.controller("EditVideoCtrl", function($scope, $sce, $routeParams, $location, 
             .then(function() {
              console.log("$scope.currentVideo from edit Video",$scope.currentVideo);
             })
-            .then(function() {
-              $location.url('/#!/collection');
-            })
+            // .then(function() {
+            //   $location.url('/#!/collection');
+            // })
       
     };
     

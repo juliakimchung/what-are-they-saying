@@ -1,6 +1,8 @@
 <div class="container-fluid container editVideo ">
-  <h3>{{currentVideo.title}}</h3>
-  <button class="lyric-btn btn showLyricsBtn" ng-click="lyrics=true">Show Lyrics/Write Lyrics</button>
+  <div class="topItems">
+    <h3>{{currentVideo.title}}</h3>
+    <button class="lyric-btn btn showLyricsBtn" ng-click="lyrics=true">Show Lyrics/Write Lyrics</button>
+  </div>
   <div class="row">
     <div class="video col-md-8 embed-responsive embed-responsive-16by9">
       <iframe class="embed-responsive-item"  width="560" height="349" ng-src='{{currentPath}}' allowfullscreen></iframe>
