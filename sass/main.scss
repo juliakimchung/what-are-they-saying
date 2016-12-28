@@ -43,10 +43,7 @@ input {
 	background-color: #F5F5F5;
 	
 }
-.headHome {
-	margin-right: 1200px;
-	margin-bottome: 35px;
-}
+
 .checkoutLyricsBtn {
 	margin-bottom: 35px;
 	border-radius: 5px;
@@ -74,9 +71,18 @@ textarea {
 	
 }
 .head {
-	font-size: 1.3em;
+	margin-right: 1125px;
+	margin-bottom: 35px;
+}
+.headHome {
+	margin-right: 1140px;
+	margin-bottom: 35px;
 }
 
+.headCol {
+	margin-right: 945px;
+	margin-bottom: 35px;
+}
 iframe {
 	margin: 20px;
 }
@@ -117,7 +123,7 @@ iframe {
   
 .container {
 	margin-top: 50px;
-	margin-bottom: 90px;
+	margin-bottom: 80px;
 	margin-right: 30px;
 	margin-left: 160px;
 	width: 80%;
@@ -125,7 +131,7 @@ iframe {
 }
 .lyricsSize {
 	font-size: 1.2em;
-	font-family: Helvetica;
+	font-family: sans-serif;
 	font-style: bold;
 }
 a {
@@ -135,9 +141,8 @@ a {
     text-decoration: none;
   }
 }
-.homeNav {
-	color: blue;
-}
+
+
 .watch {
 	margin-top: 6px;
 	text-decoration: none;
@@ -169,7 +174,7 @@ a {
 	-webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
-  border: solid 3px;
+  border: solid 2px black;
   border-style: ridge;
 	
 }
@@ -181,7 +186,10 @@ a {
 	background-color: #F5F5F5;
 }
 .username {
-	font-size: 1.2em;
+	font-size: 1.1em;
+}
+.button {
+	margin-left: 24px;
 }
 
 .loginCon {
@@ -218,13 +226,13 @@ a {
 .navBar{
 	
 	background-color: #FFE2C5;
+
+}
+.nav {
+	color: white;
 }
 
-.nav {
-	font-family: Arial;
-	font-size: 1.05em;
-	font-color: #B27D6B;
-}
+
 
 body {
 	background-color: #FFEEDD;
