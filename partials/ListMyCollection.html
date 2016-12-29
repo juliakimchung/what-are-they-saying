@@ -1,6 +1,6 @@
 <div class="text-center container-fluid container">
 <div class="headCol">
- <h3>MY K-POP COLLECTION</h3>
+ <h3 > MY K-POP COLLECTION</h3>
 </div>
 	<div class="row">
 		 <article class="col-md-4 box " ng-repeat="video in data|filter:{title: searchText.search}">
@@ -9,8 +9,8 @@
 					<div>
 						<img class="videoPic" ng-src="{{video.pic.url}}">
 					</div>
-					<button class="deleteBtn" ><a class="deleteBtn"	ng-click="remove(video.id)">Delete Video</a></button>
-					<button class="deleteBtn"><a class="watch" class="watchBtn" ng-href="/#!/edit/{{video.id}}">Watch Video</a></button>
+					<button class="deleteBtn" ><a class="deleteBtn"	ng-click="remove(video.id)">Delete </a></button>
+					<button class="deleteBtn"><a class="watch" class="watchBtn" ng-href="/#!/edit/{{video.id}}">Watch</a></button>
 		</article>
 	</div>
 </div>

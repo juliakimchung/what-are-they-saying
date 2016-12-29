@@ -45,9 +45,10 @@ input {
 }
 
 .checkoutLyricsBtn {
-	margin-bottom: 35px;
+	margin-bottom: 45px;
 	border-radius: 5px;
-	background-color: #F5F5F5;
+	color: #212622;
+	background-color: #FFE2C5;
 }
 
 .topItmes {
@@ -130,12 +131,12 @@ iframe {
 	
 }
 .lyricsSize {
-	font-size: 1.2em;
-	font-family: sans-serif;
-	font-style: bold;
-}
+	font-size: 1.3em;
+	font-family: Helvetica;
+	font-style: ultra light bold;
+	}
 a {
-  color: #30282A;
+  color: #30282A;  
 
   &:hover {
     text-decoration: none;
@@ -146,9 +147,11 @@ a {
 .watch {
 	margin-top: 6px;
 	text-decoration: none;
-	margin-bottom: 30px;
+	margin-bottom: 45px;
 	border-radius: 5px;
-	background-color: #F5F5F5;
+	color: #212622;
+	background-color: #FFE2C5;
+	font-size: 1em;
 }
 .searchCon {
 	background: url(images/girlsgen.png) repeat;
@@ -174,16 +177,18 @@ a {
 	-webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
-  border: solid 2px black;
-  border-style: ridge;
+  border: 3px black;
+  border-style: outset;
+  
 	
 }
 .deleteBtn {
 	margin-top: 6px;
 	text-decoration: none;	
-	margin-bottom: 30px;
+	margin-bottom: 45px;
 	border-radius: 5px;
-	background-color: #F5F5F5;
+	color: #212622;
+	background-color: #FFE2C5;
 }
 .username {
 	font-size: 1.1em;

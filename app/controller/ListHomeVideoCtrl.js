@@ -19,18 +19,4 @@ app.controller("ListHomeVideoCtrl", function($scope, $sce, $routeParams, $locati
 	$scope.watchHomeVideos();
 });
             
-    	// console.log("videoData from ListHomeVideoCtrl", videoData);
-    	// for(let i = 0; i < videoData.length; i++){
-    	// 	if(videoData[i].reviewCount > 3){
-    	// 		let videoForHome = videoData[i].id;
-    	// 		$scope.selectedVideos.push(videoForHome);
-    	// 		console.log("videoForHome from ListHomeVideoCtrl", $scope.selectedVideos);
-
-    			
-    	// 	}
-     // $scope.$apply()
-    	// }
- //    };
- //    });
-	// }
-
+    	

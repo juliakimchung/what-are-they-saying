@@ -4,7 +4,7 @@ app.controller("ReviewSingleVideoCtrl", function($scope, $sce, $routeParams, $lo
     $scope.currentVideo = {};
     $scope.currentPath = "";
     $scope.currentVideo.reviewCount = 0;
-    // $scope.buttonClicked = false;
+    $scope.buttonClicked = false;
     $scope.watchForReview = () => {
         VideoFactory.getSingleVideo($routeParams.videoId)
             .then((result) => {
@@ -20,7 +20,7 @@ app.controller("ReviewSingleVideoCtrl", function($scope, $sce, $routeParams, $lo
     };
     $scope.buttonClicked = () => {
         $scope.currentVideo.reviewCount++;
-        // $scope.buttonClicked = true;
+        $scope.buttonClicked = true;
 
         console.log("$scope.reviewCount from buttonClicked()", $scope.reviewCount);
          VideoFactory.updateSingleVideo($routeParams.videoId, $scope.currentVideo)

@@ -7,9 +7,9 @@ app.controller("ViewMyCollectionCtrl", function($scope, $sce, VideoFactory, $loc
 		.then((videoData)=> {
 			$scope.data = videoData;
 			$scope.$apply();
-			console.log("videoData", videoData );
+			console.log("videoData from ViewMyCollectionCtrl", videoData );
 
-		});
+		});	
 		 
 		
 	$scope.remove = function(videoId){
