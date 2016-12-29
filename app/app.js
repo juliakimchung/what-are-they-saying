@@ -18,12 +18,12 @@ let isAuth = (AuthFactory) => new Promise((resolve, reject)=> {
 	// 	controller: "LoginCtrl"
 	// })
 	.when('/login', {
-		templateUrl: 'partials/Login.html',
-		controller: 'LoginCtrl'
+	templateUrl: 'partials/Login.html',
+	controller: 'LoginCtrl'
 	})
-    .when('/video', {
-    	templateUrl: 'partials/ListAllVideo.html',
-    	controller: 'ListAllVideoCtrl',
+    .when('/home', {
+    	templateUrl: 'partials/ListHomeVideo.html',
+    	controller: 'ListHomeVideoCtrl',
     	resolve: {isAuth}
     })
     .when('/search', {
@@ -46,8 +46,18 @@ let isAuth = (AuthFactory) => new Promise((resolve, reject)=> {
     	controller: "AddReviewVideoCtrl",
     	resolve: {isAuth}
     })
+    .when('/lyric/:videoId', {
+    	templateUrl: 'partials/ReviewSingleVideo.html',
+    	controller: "ReviewSingleVideoCtrl",
+    	resolve: {isAuth}
+    })
+    .when('/footer', {
+        templateUrl: 'partials/Footer.html',
+        controller: 'FooterCtrl',
+        resolve: {isAuth}
+    })
 
-	.otherwise("/");
+	.otherwise("/login");
 
 });
 

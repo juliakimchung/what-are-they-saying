@@ -1,11 +1,16 @@
-<div class="text-center container">
-		<img src="#"><h1 id="head">My Collection</h1>
+<div class="text-center container-fluid container">
+<div class="headCol">
+ <h3 > MY K-POP COLLECTION</h3>
 </div>
-	<div class=""></div>
-		 <article class="col-md-11 box" ng-repeat="video in data|filter:{title: searchText.search}">
+	<div class="row">
+		 <article class="col-md-4 box " ng-repeat="video in data|filter:{title: searchText.search}">
+
 					<strong><p id="title">{{video.title}}</p></strong>
-						<!-- <p id="lyrics">{{video.lyrics}}</p> -->
-						<img ng-src="{{video.pic.url}}">
-					<button ><a class="deleteBtn"	ng-click="remove(video.id)">Delete Video</a></button>
-					<button><a class="watch" class="btn" ng-href="/#!/edit/{{video.id}}">Watch Video</a></button>
-		 </article>
+					<div>
+						<img class="videoPic" ng-src="{{video.pic.url}}">
+					</div>
+					<button class="deleteBtn" ><a class="deleteBtn"	ng-click="remove(video.id)">Delete </a></button>
+					<button class="deleteBtn"><a class="watch" class="watchBtn" ng-href="/#!/edit/{{video.id}}">Watch</a></button>
+		</article>
+	</div>
+</div>

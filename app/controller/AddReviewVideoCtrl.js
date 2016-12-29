@@ -1,13 +1,17 @@
 "use strict";
 app.controller("AddReviewVideoCtrl", function($scope, $sce, $routeParams, $location, $interpolate, VideoFactory, AuthFactory, SearchTermData) {
-
+$scope.searchText = SearchTermData;
   $scope.watchForReview = function(){
     VideoFactory.getAllReviewVideos()
     .then((videoData)=> {
+      console.log("videoData from watchForReview", videoData);
       $scope.data = videoData;
       $scope.$apply();
     })
 
+  }
+   $scope.watchForReview();
+});
 
   // $scope.currentVideos = [];
   // $scope.currentPath = "";
@@ -24,7 +28,7 @@ app.controller("AddReviewVideoCtrl", function($scope, $sce, $routeParams, $locat
               //         console.log("$scope.currentVideos from AddReviewVideoCtrl", $scope.currentVideos);
               //     }
               // }
-               // $scope.currentVideos = result;
+               // 
               
               // $scope.currentVideos.forEach(function(currentVideo) {
               //     currentVideo = $sce.trustAsResourceUrl(`http://www.youtube.com/embed/${currentVideo.videoId}`)
@@ -41,15 +45,4 @@ app.controller("AddReviewVideoCtrl", function($scope, $sce, $routeParams, $locat
       // });
 
 
-          // $scope.reviewVideo = function(){
-          //     VideoFactory.updateSingleVideo($routeParams.videoId, $scope.currentVideo)
-          //     .then(function(){
-          //         console.log("$scope.currentVideo from reviewVideo function", $scope.currentVideo);
-          //     })
-          //     .then(function(){
-          //         $location.url('/#!/review/:videoId')
-          //     })
-          // };
-  }
-         $scope.watchForReview();
-});
+          

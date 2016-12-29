@@ -8,7 +8,7 @@ app.controller("TopCtrl", function($scope, $location, $window, AuthFactory){
 			currentUser = user.uid;
 			$scope.isLoggedIn = true;
 			console.log("currentUser logged in?", user.uid, $scope.isLoggedIn);
-			$window.location.href = "/#!/video";
+			$window.location.href = "/#!/collection";
 		}else {
 			currentUser = null;
 			$scope.isLoggedIn = false;
@@ -19,6 +19,8 @@ app.controller("TopCtrl", function($scope, $location, $window, AuthFactory){
 	$scope.getUser = function(){
 		return currentUser;
 	};
+
+	
 
 	$scope.logout = function(){
 		AuthFactory.loggoutUser()

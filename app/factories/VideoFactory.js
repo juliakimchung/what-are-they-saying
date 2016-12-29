@@ -2,11 +2,12 @@
 app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 	
 	let fireUser = AuthFactory.getUser();
+ 	
 	console.log("fireUser", fireUser);
-
+	
 	let getAllSavedVideos = (video) => {
 		let videoCollection = [];
-		console.log("FBCreds.URL",`${FBCreds.URL}/video.json?orderBy="uid"&equalTo="${fireUser}"` );
+		//console.log("FBCreds.URL",`${FBCreds.URL}/video.json?orderBy="uid"&equalTo="${fireUser}"` );
 		return new Promise((resolve, reject)=> {
 		 $http.get(`${FBCreds.URL}/video.json?orderBy="uid"&equalTo="${fireUser}"`)
 		// uid from the firebase indexOn
@@ -26,12 +27,12 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 			});
     });
   }
-  let getAllReviewVideos = (videoId) => {
+  let getAllReviewVideos = (video) => {
 		let videoCollection = [];
-		console.log("FBCreds.URL",`${FBCreds.URL}/video.json?orderBy="review"&equalTo="true"` );
+		console.log("FBCreds.URL",`${FBCreds.URL}/video.json?orderBy="review"&equalTo=true` );
 		return new Promise((resolve, reject)=> {
 
-		$http.get(`${FBCreds.URL}/video.json?orderBy="review"&equalTo="true"`)
+		$http.get(`${FBCreds.URL}/video.json?orderBy="review"&equalTo=true`)
 		// review from the firebase indexOn
 		.then((results)=> {
 			console.log("results from getAllReviewVideos", results);
@@ -50,30 +51,44 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 			});
     });
   }
-
-  let saveVideo = function(video, user){
- 		//console.log("FBCreds.URL", `${FBCreds.URL}`, "FBCreds.URL", "${FBCreds.URL}");
-
-		let newVideo = {
-			title: video.snippet.title,
-			videoId: video.id.videoId,
-			uid: fireUser,
-			pic: video.snippet.thumbnails.medium,
-			lyrics: "",
-			review: false,
-			reviewCount: 0
-		}
-		console.log("currentUser", fireUser );
-		return new Promise((resolve, reject)=> {
-			$http.post(`${FBCreds.URL}/video.json`, angular.toJson(newVideo))
-			.then((itemObject) => {
-				resolve(itemObject);
-				console.log("itemObject after saveVideo promise", itemObject);
+  
+	  
+  let saveVideo = function(video, allUsers){
+		
+	 allUsers = AuthFactory.getAllUsers()
+	 .then((userData)=>{
+		console.log("result from users=AuthFactory.getAllUsers()", userData );
+		userData.forEach((user)=>{
+ 		if(fireUser === user.uid){
+ 			let userName = user.displayName;
+ 	 	 	console.log("username from saveVideo", userName);
+ 		
+				let newVideo = {
+					title: video.snippet.title,
+					videoId: video.id.videoId,
+					uid: fireUser,
+					pic: video.snippet.thumbnails.medium,
+					lyrics: "",
+					review: false,
+					reviewCount: 0,
+					username: userName,
+					caption: false
+				}
+				console.log("newVideo from saveVideo", newVideo);
+			return new Promise((resolve, reject)=> {
+				$http.post(`${FBCreds.URL}/video.json`, angular.toJson(newVideo))
+				.then((itemObject) => {
+					resolve(itemObject);
+					console.log("itemObject after saveVideo promise", itemObject);
 				})
 				.catch((error)=> {
 				console.log("error", error);
+				});
 			});
-		});
+		}
+	
+	 });
+	});
 	}
 
 	let getSingleVideo = (videoId)=> {
@@ -88,9 +103,7 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 			})
 		});
 	};
-	// `${FBCreds.URL}/video/${videoId}.json`
-	// `${FBCreds.URL}/${fireUser}/video/${videoId}.json`
-// `${FBCreds.URL}/video.json?orderBy="uid"&equalTo="${fireUser}"`
+	
 	let updateSingleVideo = (videoId, lyricVideo)=> {
 			return new Promise((resolve, reject) =>{
 				$http.patch(`${FBCreds.URL}/video/${videoId}.json`, angular.toJson(lyricVideo))
@@ -102,9 +115,7 @@ app.factory("VideoFactory", ($http, FBCreds, AuthFactory) => {
 				})
 			});
 	};
-	//${FBCreds.URL}${fireUser}/video/${videoId}.json
-	// ${fireUser}/video/${videoId}.json
-// `${FBCreds.URL}/video/${videoId}.json`
+	
 	let deleteVideo = (videoId) => {
 		return new Promise((resolve, reject)=> {
 			$http.delete(`${FBCreds.URL}/video/${videoId}.json`)

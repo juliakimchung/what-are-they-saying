@@ -1,14 +1,244 @@
-$font-stack:    Helvetica, sans-serif;
+$font-family-text:    Helvetica, sans-serif;
 $primary-color: #333;
 
-.video {
-	position: fixed;
+
+/*@import "compass/css3";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);*/
+
+
+
+.inputBox {
+	margin-top: 475px;
+	margin-left: 400px;
+	height: 50px;
+	width: 400px;
+	border-radius: 3px;
+	
+	background-color: #FFEEDD;
+
+}
+input {
+	background-color: #FDFFEE;
+	border-radius: 8px;
+}
+
+.inputSearch {
+	margin-top: 520px;
+	margin-left: 530px;
+	height: 50px;
+	width: 600px;
+	border-radius: 10px;
+	background-color: #FDFFEE;
+
+}
+.watchHomeBtn {
+	width: 85px;
+	height: 30px;	
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-top: 4px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	background-color: #F5F5F5;
 	
 }
 
+.checkoutLyricsBtn {
+	margin-bottom: 45px;
+	border-radius: 5px;
+	color: #212622;
+	background-color: #FFE2C5;
+}
 
-.lyrics {
-	font-size: .5em;
+.topItmes {
+	margin-left: 40px;
+}
+.footer {
+	background-color:#B27D6B;
+	height: 15px;
+
+}
+.footerFont {
+	color: white;
+}
+.text {
+	margin-left: 25px;
+}
+
+textarea {
+	width: 100%;
+	margin-top: 10px;
 	
+}
+.head {
+	margin-right: 1125px;
+	margin-bottom: 35px;
+}
+.headHome {
+	margin-right: 1140px;
+	margin-bottom: 35px;
+}
 
+.headCol {
+	margin-right: 945px;
+	margin-bottom: 35px;
+}
+iframe {
+	margin: 20px;
+}
+.lyricsEdit {
+	color: #191716;
+}
+.lyrics {
+	margin-top: 10px;
+  margin-left: 25px;
+	height: 200px;
+	overflow: scroll;
+	color: #191716;
+	
+}
+
+.lyricsReview {
+	overflow: scroll;
+	width: 1100px;
+	height:100px
+}
+.searchNav {
+	margin-top: 8px;
+}
+.editBtn {
+	margin-left: 65px;
+	background-color: #FFF5EA;
+	border: solid 1px;
+}
+
+.kfans {
+	max-width: 140px;
+	max-height: 110px;
+}
+.loginBack {
+	max-width: 1300px;
+	max-height: 1300px;
+}
+  
+.container {
+	margin-top: 50px;
+	margin-bottom: 80px;
+	margin-right: 30px;
+	margin-left: 160px;
+	width: 80%;
+	
+}
+.lyricsSize {
+	font-size: 1.3em;
+	font-family: Helvetica;
+	font-style: ultra light bold;
+	}
+a {
+  color: #30282A;  
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+.watch {
+	margin-top: 6px;
+	text-decoration: none;
+	margin-bottom: 45px;
+	border-radius: 5px;
+	color: #212622;
+	background-color: #FFE2C5;
+	font-size: 1em;
+}
+.searchCon {
+	background: url(images/girlsgen.png) repeat;
+}
+.searchArticle{
+	margin-bottom: 55px;
+}
+.loginBtn {
+	background-color: #653738;
+	
+}
+.showLyricsBtn {
+	background-color: #FFF5EA;
+	border: solid 1px;
+}
+.loginRegister {
+	margin-left: 520px;
+	margin-top: 65px;
+}
+.videoPic {
+	margin-top: 4px;
+	margin-bottom: 6px;
+	-webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border: 3px black;
+  border-style: outset;
+  
+	
+}
+.deleteBtn {
+	margin-top: 6px;
+	text-decoration: none;	
+	margin-bottom: 45px;
+	border-radius: 5px;
+	color: #212622;
+	background-color: #FFE2C5;
+}
+.username {
+	font-size: 1.1em;
+}
+.button {
+	margin-left: 24px;
+}
+
+.loginCon {
+	max-width: 100%;
+	max-height: 1250px;
+	background: url(images/girlsgen.png) repeat;
+ /*url(images/k-fans31.jpeg)2% no-repeat,
+ url(images/k-fan10.jpeg )5% no-repeat,
+ url(images/k-fans11.jpg)2% no-repeat,
+ url(images/k-fans25.jpg)2% no-repeat, 
+ url(images/k-fans19.jpeg)2% no-repeat, 
+ url(images/k-fans22.jpg)5% no-repeat, 
+ url(images/k-fans25.jpg)5% no-repeat,
+ url(images/k-fans26.jpg)5% no-repeat,
+ url(images/k-fans28.jpeg)5% no-repeat, 
+ url(images/k-fans34.jpg )5% no-repeat,
+ url(images/k-fans35.jpeg )5% no-repeat,
+ url(images/k-fans36.jpeg )5% no-repeat,
+ url(images/k-fans40.jpg )5% no-repeat,
+ url(images/k-fans39.jpeg )5% no-repeat,
+ url(images/k-pop2.jpg )5% no-repeat,
+ url(images/k-popfans15.jpg)5% no-repeat,
+ url(images/k-popfans16.jpg )5% no-repeat,
+ url(images/k-popfans2.jpg )5% no-repeat,
+ url(images/k-popfans3.jpeg )5% no-repeat,
+ url(images/k-popfans4.jpeg )5% no-repeat,
+ url(images/k-popfans6.jpeg )5% no-repeat,
+ url(images/k-popimage7.jpeg )5% no-repeat,
+ url(images/k-popimage8.jpg )5% no-repeat,
+ url(images/k-popimage8.png)5% no-repeat,
+ url(images/k-popimage9.jpg)5% no-repeat;*/
+}
+
+.navBar{
+	
+	background-color: #FFE2C5;
+
+}
+.nav {
+	color: white;
+}
+
+
+
+body {
+	background-color: #FFEEDD;
 }

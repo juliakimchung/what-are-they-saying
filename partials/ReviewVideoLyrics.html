@@ -1,44 +1,18 @@
-<div class="text-center container">
-		<img src="#"><h1 id="head">Review </h1>
-</div>
-	<div class=""></div>
-		<article class="col-md-11 box" ng-repeat="video in data|filter:{title: searchText.search}">
-				<strong><p id="title">{{video.title}}</p></strong>
-					<img ng-src="{{video.pic.url}}">
-					<p id="lyrics">{{video.lyrics}}</p>
-					<!--  <button ><a class="deleteBtn"	ng-click="remove(video.id)">Delete Video</a></button> -->
-					<!-- <button><a class="watch" class="btn" ng-href="/#!/edit/{{video.id}}">Watch Video</a></button>
+<div class="text-center container container-fluid">
+ <div class="head">
+		<h3>REVIEW </h3>
+ </div>
+	<div class="row">
+		<article class="col-md-4 box" ng-repeat="video in data|filter:{title: searchText.search}">
+				<strong><p class="title">{{video.title}}</p></strong>
+				<strong><p class="usernameReview">Translated by:  {{video.username}}</p></strong>
+				
+					<img class="videoPic" ng-src="{{video.pic.url}}">
+				<button class="checkoutLyricsBtn"><a class="watch" class="btn" ng-href="/#!/lyric/{{video.id}}">Checkout Lyrics</a></button>
+				
 		</article>
+	</div>
+</div>
 
- -->
 
 
-
-<!-- <div >
-	<h3>Review Lyrics</h3>
-	<div class="col-md-6 reviewVideo">
-		<h3>{{currentVideo.title}}</h3>
-		<div class="col-md-6 review">
-			<p>Review: {{currentVideo.reviews}}<p>
-			
-		<article class="col-md-6 box" ng-repeat="videoId in currentVideos  ">
-		<div>
-			<iframe width="400" height="300" ng-src="currentVideo.videoId" frameborder="1" allowfullscreen></iframe>
-		</div>	
-		<div class="col-md-8 lyrics">
-		 <h2>Lyrics: {{currentVideo.lyrics}}</h2> 
-		</div> -->
-		<!-- <div ng-show="lyrics"></div> --> <!-- --> 
-			<!-- <label>Click me: <input type="checkbox"></label> -->
-			<!--  <input type="checkbox" ng-model="currentVideo.review" ng-if="currentVideo.count > 3" ></label><br/>
-				<! this is for the users to check for thumbs up -->
-				 
-				<!-- <div><a class="watch" class="btn" ng-href="/#!/review/{{video.id}}">Watch Video</a></div> -->
-				 <!-- <button class="btn" ng-click="reviewVideo()">For Review</button>  -->
-		<!-- 	</article>
-		 </div>
-	  </div>
-  </div>
- -->
-	
-	

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" ng-controller="NavCtrl">
+<nav class="navbar navbar-default navbar-fixed-top navBar" ng-controller="NavCtrl">
 	<div class="container-fluid">
 	 <div class="navbar-header">
 	 	 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -7,47 +7,29 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-	  <a class="navbar-brand" href="#">K-Pop</a>
+	  <a class="navbar-brand homeNav" ng-href="/#!/home">K-PopTranslateApp</a>
 	 </div>
 	 <div class="col-xs-6 searchBox" >
 	 	<div class="input-group"> 
 	 	 <span class="input-group-btn">
 	 	 
 	 	 </span>
-	 	 <input type="text" class="form-control" placeholder="Search..." ng-model="searchText.search">
+	 	 <input type="text" class="form-control searchNav" placeholder="Search..." ng-model="searchText.search">
     </div>
    </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <!-- TODO: Use Angular to loop through nav items -->
+     
       <ul class="nav navbar-nav navbar-right" >
-        <li><a ng-href="/#!/search">Search</a></li>
-        <li><a ng-href="/#!/collection">My Video Collection</a></li>
-        <li><a ng-href="/#!/review">Review</a></li>
-        <!-- <li><a ng-href="/#!/review">Review</a></li> -->
-        <li><a ng-href="/#!/login">Login/Register</a></li>
-        <li><a ng-href="/#!/logout">Logout</a></li>
+        <li><a ng-href="/#!/home" class="homeNav">Home</a></li>
+        <li><a ng-href="/#!/search" class="homeNav">Search</a></li>
+        <li><a ng-href="/#!/collection" class="homeNav">My Video Collection</a></li>
+        <li><a ng-href="/#!/review" class="homeNav">Review</a></li>
+        <li><a ng-href="/#!/login" class="homeNav">Login/Register</a></li>
+        <li><a ng-href="/#!/logout" class="homeNav">Logout</a></li>
         <!-- <li><a ng-href="{{item.url}}">{{item.name}}</a></li> -->
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</nav>

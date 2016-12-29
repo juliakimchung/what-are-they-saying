@@ -4,16 +4,13 @@
  <title>What are they saying?</title>
  <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
  <link rel="stylesheet" type="text/css" href="css/main.css">
- <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body ng-app="K-PopTranslateApp">
 <div ng-include="'partials/Nav.html'"></div>
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1 main-container">
-      <div class="col-xs-12" ng-view> 
-     </div>
- </div>
- </div>
+
+<div ng-view></div>
+<div ng-include="'partials/Footer.html'"></div>
 
   <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js">
@@ -30,14 +27,17 @@
   <script type="text/javascript" src="app/factories/AuthFactory.js"></script>
   <script type="text/javascript" src="app/factories/FilterFactory.js"></script>
 
+ 
+  <script type="text/javascript" src="app/controller/ReviewSingleVideoCtrl.js"></script>
   <script type="text/javascript" src="app/controller/AddReviewVideoCtrl.js"></script>
-  <script type="text/javascript" src="app/controller/ListAllVideoCtrl.js"></script>
+  <script type="text/javascript" src="app/controller/ListHomeVideoCtrl.js"></script>
   <script type="text/javascript" src="app/controller/SearchCtrl.js"></script>
   <script type="text/javascript" src="app/controller/TopCtrl.js"></script>
   <script type="text/javascript" src="app/controller/ViewMyCollectionCtrl.js"></script>
   <script type="text/javascript" src="app/controller/LoginCtrl.js"></script>
   <script type="text/javascript" src="app/controller/EditVideoCtrl.js"></script>
   <script type="text/javascript" src="app/controller/NavCtrl.js"></script>
+  <script type="text/javascript" src="app/controller/FooterCtrl.js"></script>
 
 
 </body>

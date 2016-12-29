@@ -1,0 +1,19 @@
+<div class="text-center container container-fluid">
+	<div class="headHome">
+		<h3>HOME </h3>
+	</div>
+	<div class="row">
+		<article class="col-md-4 box" ng-repeat="video in selectedVideos|filter:{title: searchText.search}">
+				<strong><p class="title">{{video.title}}</p></strong>
+				<strong><p class="username">Translated by: {{video.username}}</p></strong>
+				<div>
+					<img class="videoPic" ng-src="{{video.pic.url}}">
+				</div>
+				<button class="watch"><a class="watch" class="btn" ng-href="/#!/lyric/{{video.id}}">Watch</a></button>
+				<!-- <div class="col-md-12 lyrics">
+					<h4 id="lyrics">{{video.lyrics}}</h4>
+				</div> -->
+		</article>
+	</div>
+</div>
+
