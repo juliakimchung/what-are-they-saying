@@ -3,9 +3,9 @@ app.controller("LoginCtrl", function($scope, AuthFactory, $window){
 	AuthFactory.logoutUser();
 
 	$scope.account = {
-		email: "",
-		password: "",
-		username: ""
+		email: "rody@me.com",
+		password: "123456",
+		username: "ravenclaw"
 	};
 	$scope.register = () => {
 		AuthFactory.createUser($scope.account)
