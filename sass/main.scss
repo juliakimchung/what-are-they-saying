@@ -2,11 +2,6 @@ $font-family-text:    Helvetica, sans-serif;
 $primary-color: #333;
 
 
-/*@import "compass/css3";
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);*/
-
-
 
 .inputBox {
 	margin-top: 475px;
@@ -135,6 +130,7 @@ iframe {
 	font-family: Helvetica;
 	font-style: ultra light bold;
 	}
+
 a {
   color: #30282A;  
 
@@ -152,6 +148,7 @@ a {
 	color: #212622;
 	background-color: #FFE2C5;
 	font-size: 1em;
+	text-decoration: none;	
 }
 .searchCon {
 	background: url(images/girlsgen.png) repeat;
@@ -190,6 +187,7 @@ a {
 	color: #212622;
 	background-color: #FFE2C5;
 }
+
 .username {
 	font-size: 1.1em;
 }
@@ -201,31 +199,7 @@ a {
 	max-width: 100%;
 	max-height: 1250px;
 	background: url(images/girlsgen.png) repeat;
- /*url(images/k-fans31.jpeg)2% no-repeat,
- url(images/k-fan10.jpeg )5% no-repeat,
- url(images/k-fans11.jpg)2% no-repeat,
- url(images/k-fans25.jpg)2% no-repeat, 
- url(images/k-fans19.jpeg)2% no-repeat, 
- url(images/k-fans22.jpg)5% no-repeat, 
- url(images/k-fans25.jpg)5% no-repeat,
- url(images/k-fans26.jpg)5% no-repeat,
- url(images/k-fans28.jpeg)5% no-repeat, 
- url(images/k-fans34.jpg )5% no-repeat,
- url(images/k-fans35.jpeg )5% no-repeat,
- url(images/k-fans36.jpeg )5% no-repeat,
- url(images/k-fans40.jpg )5% no-repeat,
- url(images/k-fans39.jpeg )5% no-repeat,
- url(images/k-pop2.jpg )5% no-repeat,
- url(images/k-popfans15.jpg)5% no-repeat,
- url(images/k-popfans16.jpg )5% no-repeat,
- url(images/k-popfans2.jpg )5% no-repeat,
- url(images/k-popfans3.jpeg )5% no-repeat,
- url(images/k-popfans4.jpeg )5% no-repeat,
- url(images/k-popfans6.jpeg )5% no-repeat,
- url(images/k-popimage7.jpeg )5% no-repeat,
- url(images/k-popimage8.jpg )5% no-repeat,
- url(images/k-popimage8.png)5% no-repeat,
- url(images/k-popimage9.jpg)5% no-repeat;*/
+ 
 }
 
 .navBar{
@@ -241,4 +215,12 @@ a {
 
 body {
 	background-color: #FFEEDD;
+}
+
+.logo {
+	width: 37px;
+	height: 35px;
+	margin-top: -8px;
+	margin-botton: 8px;
+	color: #B27D6B;
 }
