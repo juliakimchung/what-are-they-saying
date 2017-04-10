@@ -1,5 +1,4 @@
 what-are-they-saying
-
 Project Goals
 Creating the user interface:
 1.Users can login and select a video to watch and/or translate.
