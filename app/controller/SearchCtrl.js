@@ -4,7 +4,7 @@ app.controller("SearchCtrl", function($scope, $http, $sce, VideoFactory, AuthFac
     $scope.getVideo = function(value) {
         $http.get('https://www.googleapis.com/youtube/v3/search', {
             params: {
-                key: 'AIzaSyDmRXSz9KWkx_GKTCwOhXtyHrFnqBF7u2E',
+                key: 'AIzaSyAm_YmmR7imdzOuorlfTRcRIftBAmpqEy0',
                 part: 'snippet',
                 type: 'video',
                 q: value+"kpop"
